@@ -1,313 +1,345 @@
-@xs: 8px;
-@s: 15px;
-@m: 20px;
-@l: 25px;
-@xl: 45px;
-@xxl: 70px;
-@xxxl: 100px;
-
 body {
-    background-color: #FFF;
-    color: #000305;
-    font-size: 15px;
-    font-family: RE01;
-    line-height: 1.5;
-    text-align: left;
-    margin: 0 auto;
-    padding: 0px 10px;
-    clear: both;
+  background-color: #FFF;
+  color: #000305;
+  font-size: 12px;
+  font-family: RE01;
+  line-height: 1.5;
+  text-align: left;
+  margin: 0 auto;
+  padding: 0px 10px;
+  clear: both;
 }
-
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
-
 div.wrapper {
-    width: 220px + 100px + 708px + 100px + 220px;
+  width: 1268px;
 }
-
 /**** Player ****/
-
 .player {
-    width: 220px;
-    color: #FF6633;
-    float: left;
+  color: #FF6633;
+  float: left;
+  width: 210px;
 }
-
 .direct {
-    text-transform: uppercase;
-    font-family: RE03;
-    font-size: 15px;
-    float: left;
-    padding-top: 31px;
-    padding-left: 3px;
+  text-transform: uppercase;
+  font-family: RE02;
+  font-size: 16px;
+  float: left;
+  padding-top: 38px;
+  padding-left: 3px;
 }
-
 .symbol {
-    font-family: RE06;
-    font-size: 100px;
-    line-height: 80%;
-    float: left;
+  font-family: RE06;
+  font-size: 120px;
+  line-height: 80%;
+  float: left;
 }
-
 .player .date {
-    color: #FF6633;
-    font-size: 15px;
-    clear: both;
+  color: #FF6633;
+  font-size: 16px;
+  clear: both;
+  margin-top: 5px;
 }
-
 .player h3 {
-    font-family: RE02;
-    font-size: 25px;
-    line-height: 110%;
-    margin-bottom: 10px;
+  font-family: RE02;
+  font-size: 24px;
+  line-height: 110%;
+  margin-bottom: 10px;
 }
-
+.player .meta {
+  font-size: 12px;
+}
 .player .time {
-    font-family: RE01;
-    font-size: 45px;
+  font-family: RE01;
+  font-size: 39.6px;
+  line-height: 115%;
 }
-
 .player .controls {
-    font-family: RE06;
-    font-size: 70px;
-    line-height: 80%;
-    text-align: center;
+  font-family: RE06;
+  font-size: 60px;
+  line-height: 80%;
+  text-align: center;
 }
-
 .player hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 4px solid #FF6633;
-    margin: 0;
-    padding: 0;
+  height: 1px;
+  border: 0;
+  border-top: 3px solid #FF6633;
 }
-
 .player h4 {
-    font-family: RE03;
-    text-transform: uppercase;
-    font-size: 15px;
+  font-family: RE03;
+  text-transform: uppercase;
+  font-size: 12px;
 }
-
+.previousNext {
+  height: 30px;
+  magrin: 50px 0;
+}
+.previousNext .symbol {
+  width: 60px;
+  height: 30px;
+  background-color: #FF6633;
+  color: white;
+  font-size: 36px;
+  text-align: center;
+  margin-right: 2px;
+  padding-top: 3px;
+}
 /**** Emmission ****/
-
 div.emmission {
-    width: 708px;
-    float: left;
-    margin-left: 70px;
+  width: 600px;
+  float: left;
+  margin-left: 60px;
 }
-
 .emmission hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 4px solid black;
-    margin: 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 3px solid black;
+  margin: 0;
+  padding: 0;
 }
-
 .mainHeader {
-    color: black;
-    background-color: #FFF;
-    width: 600px;
-    height: auto;
-    margin: 15px 0 0 0;
-    overflow: hidden;
-    border-bottom: 4px solid black;
+  color: black;
+  background-color: #FFF;
+  width: 600px;
+  height: auto;
+  margin: 15px 0 0 0;
+  overflow: hidden;
+  border-bottom: 3px solid black;
 }
-
 .nomEmission {
-    font-size: 45px;
-    font-family: RE02;
-    margin-bottom: 50px;
+  font-size: 30px;
+  font-family: Reglo;
+  text-transform: uppercase;
+  margin-bottom: 45px;
 }
-
 .mainHeader nav {
-    background-color: #fff;
-    height: 75px;
+  background-color: #fff;
+  height: 65px;
 }
-
 .mainHeader nav ul {
-    width: 100%;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  font-family: RE02;
+  font-size: 12px;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
 }
-
 .mainHeader nav ul li {
-    float: left;
-    display: inline;
+  float: left;
+  display: inline;
 }
-
-.mainHeader nav a:link, .mainHeader nav a:visited {
-    color: black;
-    display: inline-block;
-    width: 200px;
-    padding: 30px 0px;
-    height: 15px;
-    text-transform: uppercase;
-    text-align: center;
+.mainHeader nav a:link,
+.mainHeader nav a:visited {
+  color: black;
+  display: inline-block;
+  width: 200px;
+  padding: 25px 0px;
+  height: 15px;
+  text-transform: uppercase;
+  text-align: center;
 }
-
-.mainHeader nav a:hover, mainHeader nav a:active, .mainHeader nav .active a:link, .mainHeader nav .active a:visited {
-    color: white;
-    background-color: black;
+.mainHeader nav a:hover,
+mainHeader nav a:active,
+.mainHeader nav .active a:link,
+.mainHeader nav .active a:visited {
+  color: white;
+  background-color: black;
 }
-
 .subHeader {
-    margin: 0;
-    background-color: white;
-    height: 110px
+  margin: 0;
+  background-color: white;
 }
-
 .dernierEpisode {
-    padding: 20px 0 0 0;
-    font-family: RE03;
-    font-size: 15px;
+  padding: 10px 0 0 0;
+  font-family: RE03;
+  font-size: 14.399999999999999px;
 }
-
-.dernierEpisode a:link, .dernierEpisode a:visited {
-    color: black;
+.dernierEpisode a:link,
+.dernierEpisode a:visited {
+  color: black;
 }
-
 .dernierEpisode a:hover {
-    color: black;
+  color: black;
 }
-
 .emmission .date {
-    padding: 20px 0 0 0;
-    font-family: RE02;
-    font-size: 25px;
+  padding: 10px 0 0 0;
+  font-family: RE01;
+  font-size: 26px;
 }
-
 div.header-details {
-    min-height: 175px;
+  min-height: 150px;
 }
-
 div.header-details img {
-    margin-top: 10px;
-    border: 2px solid black;
+  margin-top: 17px;
+  border: 2px solid black;
 }
-
 div.header-details > div {
-    float: left;
+  float: left;
 }
-
 div.header-date {
-    width: 110px;
-    text-align: center;
-    margin-right: 5px;
+  width: 80px;
+  text-align: center;
+  margin-right: 5px;
 }
-
 .header-date .day {
-    margin-top: 20px;
-    font-family: RE02;
-    text-transform: uppercase;
-    font-size: 45px;
-    line-height: 100%;
+  margin-top: 20px;
+  font-family: Reglo;
+  text-transform: uppercase;
+  font-size: 32px;
+  line-height: 100%;
 }
-
 .header-date .day-number {
-    font-family: RE02;
-    text-transform: uppercase;
-    font-size: 45px;
-    line-height: 100%;
+  font-family: Reglo;
+  text-transform: uppercase;
+  font-size: 32px;
+  line-height: 100%;
 }
-
 .header-date .time {
-    margin-top: 5px;
-    font-family: RE02;
-    text-transform: uppercase;
-    font-size: 20px;
-    line-height: 100%;
+  margin-top: 5px;
+  font-family: Reglo;
+  text-transform: uppercase;
+  font-size: 14.399999999999999px;
+  line-height: 100%;
 }
-
 div.header-outline {
-    width: 280px;
-    padding-right: 10px;
+  width: 256px;
+  padding-right: 20px;
+  padding-left: 10px;
 }
-
 .header-outline h3 {
-    font-size: 20px;
-    margin: 10px 0 6px 0;
-    font-family: RE02;
-    line-height: 130%;
+  font-size: 20.8px;
+  margin: 16px 0 10px 0;
+  font-family: RE03;
+  line-height: 115%;
 }
-
 .header-outline .credits dt {
-    font-size: 15px;
-    font-family: RE02;
-    line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 13.200000000000001px;
+  font-family: RE03;
+  line-height: 133%;
 }
-
 .header-outline .credits dd {
-    font-size: 15px;
-    font-family: RE02;
-    line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-family: RE01;
+  line-height: 150%;
+  float: left;
+  margin-left: 4px;
 }
-
 div.header-image {
-    width: 182px;
+  width: 129px;
+  margin-right: 10px;
 }
-
 div.header-controls {
-    width: 121px;
-    text-align: center;
+  margin-top: 15px;
+  width: 90px;
+  text-align: center;
 }
-
 div.header-controls .symbols {
-    font-family: RE06;
-    font-size: 70px;
-    line-height: 80%;
+  font-family: RE06;
+  font-size: 60px;
+  line-height: 70%;
+  -webkit-transition-property: color;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease;
+  cursor: pointer;
 }
-
+div.header-controls .symbols:hover {
+  color: blue;
+}
 dl.credits dt {
-    float: left;
-    clear: left;
+  float: left;
+  clear: left;
 }
-
 dt:after {
-    content: ":";
+  content: ":";
 }
-
+ul.tags {
+  margin-top: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
 ul.tags li {
-    font-size: 8px;
-    font-family: RE03;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    float: left;
-    border: 1px solid black;
-    margin: 2px 2px;
-    padding: 3px 3px 0px 3px;
-    border-radius: 7px;
+  font-size: 8.8px;
+  font-family: RE03;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  float: left;
+  border: 1px solid black;
+  margin: 2px 2px;
+  padding: 3px 3px 0px 3px;
+  border-radius: 7px;
 }
-
+.accordion {
+  margin-bottom: 50px;
+}
+.accordion .strip {
+  margin: 2px 0;
+  height: 20px;
+  background-color: black;
+}
+.accordion p {
+  color: white;
+  font-family: RE02;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+  padding-top: 4px;
+}
+.accordion .symbol {
+  color: white;
+  font-size: 20px;
+  margin: 2px 5px;
+}
 /**** Breves ****/
-
 .breves {
-    width: 220px;
-    color: blue;
-    float: left;
-    margin-left: 100px;
-    margin-top: 15px;
+  width: 220px;
+  color: blue;
+  float: left;
+  margin-left: 60px;
+  margin-top: 12px;
 }
-
 .breves img {
-    border: 2px solid blue;
+  border: 2px solid blue;
 }
-
 .breves-header span {
-    background-color: blue;
-    color: white;
-    padding: 10px 15px;
-    height: 15px;
-    font-size: 15px;
-    font-family: RE03;
-    text-transform: uppercase;
-    display: inline-block;
+  background-color: blue;
+  color: white;
+  padding: 10px 12px;
+  height: 12px;
+  font-size: 12px;
+  font-family: RE03;
+  text-transform: uppercase;
+  display: inline-block;
 }
-
+.breves h3 {
+  font-family: RE03;
+  line-height: 115%;
+  font-size: 20px;
+  margin: 10px 0 5px 0;
+}
+.breves .suite {
+  margin: 10px 0 40px 0;
+  height: 20px;
+  width: 60px;
+  background-color: blue;
+}
+.breves .symbol {
+  margin: 2px 5px;
+  color: white;
+  font-size: 20px;
+}
+.breves .suite p {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: RE02;
+  font-size: 10px;
+  padding-top: 4px;
+}
 /**
  * For modern browsers
  * 1. The space content is one way to avoid an Opera bug when the
@@ -317,20 +349,22 @@ ul.tags li {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.cf:before, .cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
+.cf:before,
 .cf:after {
-    clear: both;
-}
+  content: " ";
+  /* 1 */
 
+  display: table;
+  /* 2 */
+
+}
+.cf:after {
+  clear: both;
+}
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
 .cf {
-    *zoom: 1;
+  *zoom: 1;
 }
-
