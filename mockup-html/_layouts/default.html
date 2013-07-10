@@ -104,6 +104,11 @@
             $(this).addClass("active");
         };
     });
+    
+    $(".strip").click(function(e){
+        e.preventDefault();
+        $(this).next(".slide-out").slideToggle('easeInOutQuint');
+    });
 </script>
 </body>
 
