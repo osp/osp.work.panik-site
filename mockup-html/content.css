@@ -1,54 +1,138 @@
+@xs: 8px;
+@s: 15px;
+@m: 20px;
+@l: 25px;
+@xl: 45px;
+@xxl: 70px;
+@xxxl: 100px;
+
 body {
-    background-color:#FFF;
-    color:#000305;
-    font-size: 87.5%;
+    background-color: #FFF;
+    color: #000305;
+    font-size: 15px;
     font-family: RE01;
     line-height: 1.5;
-    text-align:left;
-}
-
-a {
-    text-decoration: none;    
-}
-
-
-.body {
+    text-align: left;
     margin: 0 auto;
-    width: 90%;
+    padding: 0px 10px;
     clear: both;
 }
 
+a {
+    text-decoration: none;
+}
+
 div.wrapper {
-    /* 220 + 100 + 708 + 100 + 220*/
-    width: 1348px;
-    }
+    width: 220px + 100px + 708px + 100px + 220px;
+}
+
+/**** Player ****/
+
+.player {
+    width: 220px;
+    color: #FF6633;
+    float: left;
+}
+
+.direct {
+    text-transform: uppercase;
+    font-family: RE03;
+    font-size: 15px;
+    float: left;
+    padding-top: 31px;
+    padding-left: 3px;
+}
+
+.symbol {
+    font-family: RE06;
+    font-size: 100px;
+    line-height: 80%;
+    float: left;
+}
+
+.player .date {
+    color: #FF6633;
+    font-size: 15px;
+    clear: both;
+}
+
+.player h3 {
+    font-family: RE02;
+    font-size: 25px;
+    line-height: 110%;
+    margin-bottom: 10px;
+}
+
+.player .time {
+    font-family: RE01;
+    font-size: 45px;
+}
+
+.player .controls {
+    font-family: RE06;
+    font-size: 70px;
+    line-height: 80%;
+    text-align: center;
+}
+
+.player hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 4px solid #FF6633;
+    margin: 0;
+    padding: 0;
+}
+
+.player h4 {
+    font-family: RE03;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+/**** Emmission ****/
+
+div.emmission {
+    width: 708px;
+    float: left;
+    margin-left: 70px;
+}
+
+.emmission hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 4px solid black;
+    margin: 0;
+    padding: 0;
+}
 
 .mainHeader {
-    color:black;
-    background-color:#FFF;
-    width:600px;
+    color: black;
+    background-color: #FFF;
+    width: 600px;
     height: auto;
-    margin: 2% 0 0 0;
-    overflow:hidden;
+    margin: 15px 0 0 0;
+    overflow: hidden;
     border-bottom: 4px solid black;
 }
 
 .nomEmission {
-    font-size:250%;
-    font-family:RE02;
-    margin-bottom:50px;
+    font-size: 45px;
+    font-family: RE02;
+    margin-bottom: 50px;
 }
 
 .mainHeader nav {
-    background-color:#fff;
+    background-color: #fff;
     height: 75px;
 }
 
 .mainHeader nav ul {
-    width:100%;
-    list-style:none;
-    margin:0;
-    padding:0;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .mainHeader nav ul li {
@@ -57,256 +141,196 @@ div.wrapper {
 }
 
 .mainHeader nav a:link, .mainHeader nav a:visited {
-    color:black;
+    color: black;
     display: inline-block;
-    width:200px;
+    width: 200px;
     padding: 30px 0px;
     height: 15px;
-    text-transform:uppercase;
-    text-align:center;
+    text-transform: uppercase;
+    text-align: center;
 }
 
-.mainHeader nav a:hover, mainHeader nav a:active,
-.mainHeader nav .active a:link, .mainHeader nav .active a:visited {
-    color:white;
+.mainHeader nav a:hover, mainHeader nav a:active, .mainHeader nav .active a:link, .mainHeader nav .active a:visited {
+    color: white;
     background-color: black;
 }
 
 .subHeader {
-    margin:0;
-    background-color:white;
-    height:110px    
+    margin: 0;
+    background-color: white;
+    height: 110px
 }
 
 .dernierEpisode {
-    padding:20px 0 0 0;
-    font-family:RE03;
-    font-size:15px;
+    padding: 20px 0 0 0;
+    font-family: RE03;
+    font-size: 15px;
 }
 
 .dernierEpisode a:link, .dernierEpisode a:visited {
-    color:black;
+    color: black;
 }
 
 .dernierEpisode a:hover {
-    color:black;
-}
- 
-.date {
-    padding:20px 0 0 0;
-    font-family:RE02;
-    font-size:27px;
+    color: black;
 }
 
-.player {
-    width:220px;
-    color: #FF6633;
-    float:left;
- }
- 
-.context {
-    width:220px;
-    color: #FF6633;
-    float:left;
-    margin-left: 100px;
- } 
-    
-.direct {
-	text-transform:uppercase;
-	font-family:RE03;
-	font-size:15px;
-	float:left;
-	padding-top:31px;
-	padding-left:3px;
+.emmission .date {
+    padding: 20px 0 0 0;
+    font-family: RE02;
+    font-size: 25px;
 }
-
-.symbol {
-	font-family:RE06;
-	font-size:100px;
-	line-height:80%;
-	float:left;
-}
-
-.player .date {
-    color: #FF6633;
-    font-size:15px;
-    clear:both;
-    }
-    
-.player h3 {
-	font-family:RE02;
-	font-size:25px;
-	line-height:110%;
-	margin-bottom:10px;
-    }
-    
-.player .time {
-	font-family:RE01;
-	font-size:45px;
-}
-
-.player .controls {
-	font-family:RE06;
-	font-size:70px;
-	line-height:80%;
-	text-align:center;
-}
-
-.player hr {
-	display: block; height: 1px;
-	border: 0; border-top: 4px solid #FF6633;
-	margin: 0; padding: 0;
-	}
-	
-.player h4 {
-	font-family:RE03;
-	text-transform:uppercase;
-	font-size:15px;
-    }
 
 div.header-details {
     min-height: 175px;
-    }
-    
+}
+
 div.header-details img {
-    margin-top:10px;
+    margin-top: 10px;
     border: 2px solid black;
-    }
-    
- div.emmission {
-     width: 708px;
-     float: left;
-     margin-left: 70px;
-     }   
-     
-.emmission hr{
-	display: block; height: 1px;
-	border: 0; border-top: 4px solid black;
-	margin: 0; padding: 0;
 }
 
 div.header-details > div {
     float: left;
-    }
+}
 
 div.header-date {
     width: 110px;
-    text-align:center;
-    margin-right:5px;
+    text-align: center;
+    margin-right: 5px;
 }
 
 .header-date .day {
-    margin-top:20px;
-    font-family:RE02;
-    text-transform:uppercase;
-    font-size:45px;
-    line-height:100%;
+    margin-top: 20px;
+    font-family: RE02;
+    text-transform: uppercase;
+    font-size: 45px;
+    line-height: 100%;
 }
 
 .header-date .day-number {
-    font-family:RE02;
-    text-transform:uppercase;
-    font-size:45px;
-    line-height:100%;
-
+    font-family: RE02;
+    text-transform: uppercase;
+    font-size: 45px;
+    line-height: 100%;
 }
 
 .header-date .time {
-    margin-top:5px;
-    font-family:RE02;
-    text-transform:uppercase;
-    font-size:20px;
-    line-height:100%;
-
+    margin-top: 5px;
+    font-family: RE02;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 100%;
 }
 
 div.header-outline {
     width: 280px;
-    padding-right:10px;
-    }
-    
+    padding-right: 10px;
+}
+
 .header-outline h3 {
-    font-size:20px;
-    margin:10px 0 6px 0;
-     font-family:RE02;
-    line-height:130%;
+    font-size: 20px;
+    margin: 10px 0 6px 0;
+    font-family: RE02;
+    line-height: 130%;
 }
 
 .header-outline .credits dt {
-    font-size:14px;
-     font-family:RE02;
-    line-height:150%;
+    font-size: 15px;
+    font-family: RE02;
+    line-height: 150%;
 }
 
 .header-outline .credits dd {
-    font-size:14px;
-    font-family:RE02;
-    line-height:150%;
+    font-size: 15px;
+    font-family: RE02;
+    line-height: 150%;
 }
 
 div.header-image {
     width: 182px;
-    }
+}
 
 div.header-controls {
     width: 121px;
-    text-align:center;
-    }
-    
+    text-align: center;
+}
+
 div.header-controls .symbols {
-    font-family:RE06;
-    font-size:80px;
-    line-height:80%;
-    }
+    font-family: RE06;
+    font-size: 70px;
+    line-height: 80%;
+}
 
 dl.credits dt {
-            float: left;
+    float: left;
     clear: left;
-
-    }
+}
 
 dt:after {
     content: ":";
-    }
+}
 
 ul.tags li {
-    font-size:8px;
-    font-family:RE03;
-    letter-spacing:1px;
-     text-transform:uppercase;
+    font-size: 8px;
+    font-family: RE03;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     float: left;
     border: 1px solid black;
     margin: 2px 2px;
-    padding: 3px 3px  0px 3px;
+    padding: 3px 3px 0px 3px;
     border-radius: 7px;
-    }
+}
 
+/**** Breves ****/
 
-*/**
-* * For modern browsers
-* * 1. The space content is one way to avoid an Opera bug when the
-* *    contenteditable attribute is included anywhere else in the document.
-* *    Otherwise it causes space to appear at the top and bottom of elements
-* *    that are clearfixed.
-* * 2. The use of `table` rather than `block` is only necessary if using
-* *    `:before` to contain the top-margins of child elements.
-* */
-*.cf:before,
-*.cf:after {
-*    content: " "; /* 1 */
-*    display: table; /* 2 */
-*}
-*
-*.cf:after {
-*    clear: both;
-*}
-*
-*/**
-* * For IE 6/7 only
-* * Include this rule to trigger hasLayout and contain floats.
-* */
-*.cf {
-*    *zoom: 1;
-*}
+.breves {
+    width: 220px;
+    color: blue;
+    float: left;
+    margin-left: 100px;
+    margin-top: 15px;
+}
 
+.breves img {
+    border: 2px solid blue;
+}
+
+.breves-header span {
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    height: 15px;
+    font-size: 15px;
+    font-family: RE03;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before, .cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
 
