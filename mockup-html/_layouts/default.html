@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Radio Panik</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="css/type.css" type="text/css" />
+    <link rel="stylesheet" href="http://get.schr.fr/panik.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="body">
+
+<div class="wrapper">
+    <div class="player">
+        <div class="symbol">G</div>
+        <div class="direct"> 
+            en direct
+        </div>
+        
+        <div class="date">02/06/2013</div>
+        <h3>Jehona</h3>
+        
+        <div class="meta">Commence à</div>
+        <div class="time">07:00</div>
+        
+      <div class="previousNext">  
+        <span class="symbol">K</span>
+        <span class="symbol">K</span>
+	</div>
+        
+        <hr />
+        
+        <div class="controls">
+            <span>H</span><span>E</span><span>A</span><span>D</span><span>F</span>
+        </div>
+    </div>
+
+    <div class="emmission">
+        <header class="mainHeader">
+            <div class="nomEmission">les matins tranquilles</div>
+            <nav><ul>
+                <li ><a href="home.html">Episode</a></li>
+                <li ><a href="emission.html">L'emission</a></li>
+                <li ><a href="archives.html">Archives</a></li>
+            </ul></nav>
+        </header>
+        
+        {{ page.content }}
+    
+    </div>
+
+    <div class="breves">
+    
+                <div class="breves-image">
+                <img src="http://placehold.it/220X160" />
+                </div>
+        <h3>Concours de créations sonores de l’Ousopo</h3>
+        <p>On vient de vous l’annoncer dans Panikorama : des places à gagner pour le concert de Mulabanda, jeudi 4/4. Envoyez simplement un mail à</p>
+        
+        <div class="suite"><span class="symbol">K</span><p>suite</p></div>
+        
+        <h3>Podcasts autour de la programmation transversale sur la propriété intellectuelle</h3>
+        <p>Du 5 au 25 novembre 2012, Radio Panik a diffusé une programmation transversale autour de la propriété intellectuelle : "Copyright ta grand-mère et partage le reste...".</p>
+        
+        <div class="suite"><span class="symbol">K</span><p>suite</p></div>
+    </div>
+
+</div>
+<script src="js/jquery-1.10.2.js"></script>
+<script>
+    var noSlash = function(path) {
+        elements = path.split('/');
+        return elements[elements.length - 1];
+    }
+    
+    // add the class "active" to page currently being visited
+    $(".emmission nav li").each(function() {
+        if ( noSlash($(this).children("a").attr('href')) === noSlash(document.location.pathname) ) { 
+            $(this).addClass("active");
+        };
+    });
+</script>
+</body>
+
+</html>
+
