@@ -91,7 +91,7 @@
     }
     
     // add the class "active" to page currently being visited
-    $(".emmission nav li").each(function() {
+    $(".emission nav li").each(function() {
         if ( noSlash($(this).children("a").attr('href')) === noSlash(document.location.pathname) ) { 
             $(this).addClass("active");
         };
