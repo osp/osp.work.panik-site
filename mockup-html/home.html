@@ -1,55 +1,21 @@
 ---
 layout: default
 ---
+    <div class="content emission">
+        <header class="mainHeader">
+            <div class="nomEmission">les matins tranquilles</div>
+            <nav><ul>
+                <li ><a href="home.html">Episode</a></li>
+                <li ><a href="emission.html">L'emission</a></li>
+                <li ><a href="archives.html">Archives</a></li>
+            </ul></nav>
+        </header>
         <div class="subHeader">
             <div class="dernierEpisode"><a href="#">Dernier episode</a></div>
             <div class="date">Fevrier 2013</div>
             <hr/>
         </div>
-            <div class="header-details cf">
-            <div class="header-date">
-                <div class="day">
-                    ME
-                </div>
-                <div class="day-number">
-                    04
-                </div>
-                <div class="time">
-                    07:00
-                </div>
-            </div>
-            <div class="header-outline">
-                <h3>Comédie sur un quai de gare et Apéros verts</h3>
-                <dl class="credits cf">
-                    <dt>Serie</dt>
-                    <dd>La musique</dd>
-                    <dt>Auteur</dt>
-                    <dd>Jean Dupont</dd>
-                    <dt>Rediffusion</dt>
-                    <dd>Émission de JetFM</dd>
-                </dl>
-                <ul class="tags">
-                    <li>1955</li>
-                    <li>RCA</li>
-                    <li>Synthetiseur</li>
-                    <li>Electronique</li>
-                    <li>Harry Olson</li>
-                     <li>1955</li>
-                    <li>RCA</li>
-                    <li>Synthetiseur</li>
-                </ul>
-            </div>
-            <div class="header-image">
-        <img src="http://placehold.it/125X125" />
-            </div>
-            <div class="header-controls">
-            <div class=symbols>AB</div>
-                  <div class=symbols>I</div>
-                  <div class=symbols>C</div>
-    
-    
-            </div>
-            </div>
+{% include archive-item-emission.html %}
              <hr/>
 
        <div class="accordion">
@@ -106,29 +72,14 @@ layout: default
             <div class="slide-out associated-sounds">
                 <h3>(32) Sons associés à la episode (97min) <span class=symbols>ABIC</span></h3>
                 
-                <div>
-                    <h4>The sound of silence</h4>
-                    
-                    <p>Dero volorrovitat as aut enimporera veribus, nimpe lacereh endelent et rae reribus maximin ex el mo de inullanim volorest odi aut quos eatem repre saperspis sequo Dero volorrovitat as aut enimporera veribus, nimpe lace Dero volorrovitat as aut enimporera veribus, nimpe lace</p>
-                    
-                    <dl class="metadata cf">
-                        <dt>Genre</dt>
-                        <dd>Rock</dd>
-                        <dt>Auteur</dt>
-                        <dd>Simon &amp; Garfunkel</dd>
-                        <dt>Album</dt>
-                        <dd>The Sound of Silence</dd>
-                        <dt>Date</dt>
-                        <dd>00/00/0000
-                        <dt>Licence</dt>
-                        <dd>Copyright Format</dd>
-                        <dd>ogg</dd>
-                        <dt>Duree</dt>
-                        <dd>3'32'</dd>
-                        <dt>Resolution</dt>
-                        <dd>320kbps</dd>
-                    </dl>
-                </div>
+                {% include archive-item-media.html %}
+                
+                {% include archive-item-media.html %}
+                
+                {% include archive-item-media.html %}
+                
+                {% include archive-item-media.html %}
                 
             </div>
        </div>
+    </div>
