@@ -2,17 +2,30 @@
 layout: default
 ---
 <div class="content">
-    <nav>
-        <ul>
-            <li>Lundi</li>
-            <li>Mardi</li>
-            <li>Mercredi</li>
-            <li>Jeudi</li>
-            <li>Vendredi</li>
-            <li>Samedi</li>
-            <li>Dimanche</li>
-        </ul>
-    </nav>
+    <header class="mainHeader">    
+        <nav>
+            <ul>
+                <li>Lundi</li>
+                <li>Mardi</li>
+                <li>Mercredi</li>
+                <li class="active">Jeudi</li>
+                <li>Vendredi</li>
+                <li>Samedi</li>
+                <li>Dimanche</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="cf"></div>
+    <h3>Jeudi 03 Fevrier 2013</h3>
+    <hr/>
+    {% include archive-item-emission.html %}
+    <hr/>
+    {% include archive-item-emission.html %}
+    <hr/>
+    {% include archive-item-emission.html %}
+    <hr/>
+    {% include archive-item-emission.html %}
+    <hr/>
     {% include archive-item-emission.html %}
 
 </div>
