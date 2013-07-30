@@ -1,345 +1,796 @@
+/* COLORS */
+
+@black: #000000;
+@orange: #FF6633;
+@blue: #0000FF;
+
+/* SIZES*/
+
+@xxs: 8px;
+@xs: 10px;
+@s: 12px;
+@m: 16px;
+@l: 20px;
+@xl: 36px;
+@xxl: 60px;
+@xxxl: 80px;
+
+/* Mixins */
+
+.squash(@n) {
+    transform: scale(@n,1);
+    -webkit-transform: scale(@n,1);
+    -moz-transform: scale(@n,1);
+    -ms-transform: scale(@n,1);
+    -o-transform: scale(@n,1);
+    -webkit-transform-origin: 0 0;
+    }
+
+/* Styles that apply everywhere */
+
 body {
-  background-color: #FFF;
-  color: #000305;
-  font-size: 12px;
-  font-family: RE01;
-  line-height: 1.5;
-  text-align: left;
-  margin: 0 auto;
-  padding: 0px 10px;
-  clear: both;
+    background-color: white;
+    color: #000305;
+    font-size: @s;
+    font-family: RE01;
+    line-height: 1.5;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0px 10px;
+    clear: both;
 }
+
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
+
+p {
+    line-height: 1.2;
+    margin-bottom: 15px;
+    }
+
 div.wrapper {
-  width: 1268px;
+    width: 220px + 60px + 708px + 60px + 220px;
 }
-/**** Player ****/
-.player {
-  color: #FF6633;
-  float: left;
-  width: 210px;
+
+#siteNav > div {
+    margin-bottom: @l;
+    float:left;
+    }
+    
+
+.menuMedia {
+    color:@orange;
+    width:210px;
+    }
+
+.menuEmissions {
+    color:@black;
+    width:498px;
+    margin-left:60px;
+    }
+
+.menuNews {
+    color:@blue;
+    width:370px;
+    margin-left:58px;
+    }
+
+
+h1 {
+    font-size: @l*3;
+    font-family: Reglo;
+    text-transform: uppercase;
+    .squash(0.5);
+    }
+
+h2 {
+    font-size: 120px;
+    font-family: Reglo;
+    text-transform: uppercase;
+    .squash(.5);
+    }
+
+h3 {
+    font-family: Reglo;
+    text-transform:uppercase;
+    font-size: @l*1.2;
+    line-height: 110%;
+    margin-bottom: 10px;
 }
-.direct {
-  text-transform: uppercase;
-  font-family: RE02;
-  font-size: 16px;
-  float: left;
-  padding-top: 38px;
-  padding-left: 3px;
-}
-.symbol {
-  font-family: RE06;
-  font-size: 120px;
-  line-height: 80%;
-  float: left;
-}
-.player .date {
-  color: #FF6633;
-  font-size: 16px;
-  clear: both;
-  margin-top: 5px;
-}
-.player h3 {
-  font-family: RE02;
-  font-size: 24px;
-  line-height: 110%;
-  margin-bottom: 10px;
-}
-.player .meta {
-  font-size: 12px;
-}
-.player .time {
-  font-family: RE01;
-  font-size: 39.6px;
-  line-height: 115%;
-}
-.player .controls {
-  font-family: RE06;
-  font-size: 60px;
-  line-height: 80%;
-  text-align: center;
-}
-.player hr {
-  height: 1px;
-  border: 0;
-  border-top: 3px solid #FF6633;
-}
-.player h4 {
-  font-family: RE03;
-  text-transform: uppercase;
-  font-size: 12px;
-}
-.previousNext {
-  height: 30px;
-  magrin: 50px 0;
-}
-.previousNext .symbol {
-  width: 60px;
-  height: 30px;
-  background-color: #FF6633;
-  color: white;
-  font-size: 36px;
-  text-align: center;
-  margin-right: 2px;
-  padding-top: 3px;
-}
-/**** Emmission ****/
-div.emmission {
-  width: 600px;
-  float: left;
-  margin-left: 60px;
-}
-.emmission hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 3px solid black;
-  margin: 0;
-  padding: 0;
-}
-.mainHeader {
-  color: black;
-  background-color: #FFF;
-  width: 600px;
-  height: auto;
-  margin: 15px 0 0 0;
-  overflow: hidden;
-  border-bottom: 3px solid black;
-}
-.nomEmission {
-  font-size: 30px;
-  font-family: Reglo;
-  text-transform: uppercase;
-  margin-bottom: 45px;
-}
-.mainHeader nav {
-  background-color: #fff;
-  height: 65px;
-}
-.mainHeader nav ul {
-  font-family: RE02;
-  font-size: 12px;
-  width: 100%;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  letter-spacing: 1px;
-}
-.mainHeader nav ul li {
-  float: left;
-  display: inline;
-}
-.mainHeader nav a:link,
-.mainHeader nav a:visited {
-  color: black;
-  display: inline-block;
-  width: 200px;
-  padding: 25px 0px;
-  height: 15px;
-  text-transform: uppercase;
-  text-align: center;
-}
-.mainHeader nav a:hover,
-mainHeader nav a:active,
-.mainHeader nav .active a:link,
-.mainHeader nav .active a:visited {
-  color: white;
-  background-color: black;
-}
-.subHeader {
-  margin: 0;
-  background-color: white;
-}
-.dernierEpisode {
-  padding: 10px 0 0 0;
-  font-family: RE03;
-  font-size: 14.399999999999999px;
-}
-.dernierEpisode a:link,
-.dernierEpisode a:visited {
-  color: black;
-}
-.dernierEpisode a:hover {
-  color: black;
-}
-.emmission .date {
-  padding: 10px 0 0 0;
-  font-family: RE01;
-  font-size: 26px;
-}
-div.header-details {
-  min-height: 150px;
-}
-div.header-details img {
-  margin-top: 17px;
-  border: 2px solid black;
-}
-div.header-details > div {
-  float: left;
-}
-div.header-date {
-  width: 80px;
-  text-align: center;
-  margin-right: 5px;
-}
-.header-date .day {
-  margin-top: 20px;
-  font-family: Reglo;
-  text-transform: uppercase;
-  font-size: 32px;
-  line-height: 100%;
-}
-.header-date .day-number {
-  font-family: Reglo;
-  text-transform: uppercase;
-  font-size: 32px;
-  line-height: 100%;
-}
-.header-date .time {
-  margin-top: 5px;
-  font-family: Reglo;
-  text-transform: uppercase;
-  font-size: 14.399999999999999px;
-  line-height: 100%;
-}
-div.header-outline {
-  width: 256px;
-  padding-right: 20px;
-  padding-left: 10px;
-}
-.header-outline h3 {
-  font-size: 20.8px;
-  margin: 16px 0 10px 0;
+h4 {
+   font-size: @m*1.1;
   font-family: RE03;
   line-height: 115%;
+  text-transform: inherit;
+    }
+
+h5 {
+    font-family: RE03;
+    text-transform: uppercase;
+    font-size: @s;
+    margin-bottom:3px;
 }
-.header-outline .credits dt {
-  letter-spacing: 1px;
-  font-size: 13.200000000000001px;
-  font-family: RE03;
-  line-height: 133%;
+
+dt {
+    float: left;
+    clear: left;
 }
-.header-outline .credits dd {
-  letter-spacing: 1px;
-  font-size: 12px;
-  font-family: RE01;
-  line-height: 150%;
-  float: left;
-  margin-left: 4px;
+
+dd {
+    float: left;
+   margin-left: 4px; 
 }
-div.header-image {
-  width: 129px;
-  margin-right: 10px;
-}
-div.header-controls {
-  margin-top: 15px;
-  width: 90px;
-  text-align: center;
-}
-div.header-controls .symbols {
-  font-family: RE06;
-  font-size: 60px;
-  line-height: 70%;
-  -webkit-transition-property: color;
-  -webkit-transition-duration: 0.2s;
-  -webkit-transition-timing-function: ease;
-  cursor: pointer;
-}
-div.header-controls .symbols:hover {
-  color: blue;
-}
-dl.credits dt {
-  float: left;
-  clear: left;
-}
+
 dt:after {
-  content: ":";
+    content: ":";
 }
+
+dl.metadata dt {
+    clear: none;
+}
+
+dl.metadata dd {
+    margin-right: 4px;
+    }
+
 ul.tags {
-  margin-top: 10px;
-  overflow: hidden;
-  margin-bottom: 15px;
+    margin-top:10px;
+    overflow:hidden;
+    margin-bottom:15px;
 }
+
 ul.tags li {
-  font-size: 8.8px;
-  font-family: RE03;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  float: left;
-  border: 1px solid black;
-  margin: 2px 2px;
-  padding: 3px 3px 0px 3px;
-  border-radius: 7px;
+    font-size: @xxs*1.1;
+    font-family: RE03;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    float: left;
+    border: 1px solid @black;
+    margin: 2px 2px;
+    padding: 3px 3px 0px 3px;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
 }
+
+.direct {
+    text-transform: uppercase;
+    font-family: RE02;
+    font-size: @m;
+    float: left;
+    padding-top: 38px;
+    padding-left: 3px;
+}
+
+.symbol {
+    font-family: RE06;
+    font-size: @xxl*1.5;
+    line-height: 80%;
+    float: left;
+}
+
+/**** Player ****/
+
+.player {
+    color: @orange;
+    float: left;
+    width: 210px;
+}
+
+.player a, .player a:visited, .player a:active {
+    color: lighten(@orange, 20%);
+    }
+
+.player .date {
+    font-size: @m;
+    clear: both;
+    margin-top:5px;
+}
+
+.player .meta {
+        font-size: @m;
+    }
+
+.player .time {
+    font-family: RE01;
+    font-size: @m;
+    line-height: 115%;
+    margin-bottom:12px;
+
+}
+
+.player .controls {
+    font-family: RE06;
+    font-size: @xxl;
+    line-height: 80%;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.player hr {
+    height: 1px;
+    border: 0;
+    border-top: 3px solid @orange;
+}
+
+.player h4 {
+    font-family: RE03;
+    text-transform: uppercase;
+    font-size: @s;
+}
+
+.previousNext {
+    margin: 40px 0 16px 0;
+    height: 22px;
+    }
+    
+.previousNext .symbol {
+    width:50px;
+    height: 22px;
+    background-color:@orange;
+    color:white;
+    font-size:@l;
+    text-align:center;
+    margin-right:2px;
+    padding-top:6px;
+    }
+    
+.playlist .item {
+    margin:20px 0;
+    }
+    
+.playlist img {
+    border: 2px solid @orange;
+    float:left;
+    margin-right:10px;
+    }
+
+
+/**** Emission / Content ****/
+
+div.content {
+    width: 498px;
+    float: left;
+    margin-left: 60px;
+}
+
+.content h1 {
+width: 996px;    
+    }
+
+.content a, .menuEmissions a, .content a:visited, .menuEmissions a:visited, .content a:active, .menuEmissions a:active {
+    color: lighten(@black, 20%);
+    }
+
+.content hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 3px solid @black;
+    margin: 0;
+    padding: 0;
+}
+
+.emission .mainHeader {
+    overflow: hidden;
+    border-bottom: 3px solid @black;
+}
+
+.emission .mainHeader nav {
+    height: 65px;
+    margin-top: 20px;
+}
+
+
+
+
+.emission .mainHeader nav ul {
+    font-size: @l;
+    font-family: Reglo;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+    transform : scale(1,2);
+    -webkit-transform:scale(1,2);
+    -moz-transform:scale(1,2);
+    -ms-transform:scale(1,2);
+    -o-transform:scale(1,2);
+    line-height:1%;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    letter-spacing:1px;
+}
+
+.mainHeader nav ul li {
+    float: left;
+    display: inline;
+}
+
+nav.contextual-menu {
+    text-align: justify;
+    text-justify: distribute-all-lines;
+    
+    li {
+        display: inline-block;
+    }
+    li h5 {
+        font-family: Reglo;
+    }
+    li a.active, li a:hover {
+        text-decoration: underline;
+        color: inherit;
+    }
+    li a:hover {
+        cursor: pointer;
+    }
+    .stretch {
+        width: 100%;
+        display: inline-block;
+        font-size: 0;
+        line-height: 0
+    }
+}
+
+
+
+.emission .mainHeader nav a:link, .mainHeader nav a:visited {
+    color: @black;
+    display: inline-block;
+    width: 166px;
+    padding: 20px 0px;
+    height: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.mainHeader nav a:hover, mainHeader nav a:active, .mainHeader nav .active a:link, .mainHeader nav .active a:visited {
+    color: white;
+    background-color: @black;
+}
+
+.subHeader {
+    margin: 0;
+}
+
+.dernierEpisode {
+    padding: 10px 0 0 0;
+    font-family: RE03;
+    font-size: @s*1.2;
+}
+
+.dernierEpisode a:link, .dernierEpisode a:visited {
+    color: @black;
+}
+
+.dernierEpisode a:hover {
+    color: @black;
+}
+
+.content .date {
+   font-size: @l;
+    font-family: Reglo;
+    text-transform: uppercase;
+    margin-top: 15px;
+    letter-spacing:1px;
+    transform : scale(1,2);
+    -webkit-transform:scale(1,2);
+    -moz-transform:scale(1,2);
+    -ms-transform:scale(1,2);
+    -o-transform:scale(1,2);
+    line-height:250%;
+}
+
+div.header-details {
+    min-height: 100px;
+}
+
+div.header-details img {
+    margin-top: 17px;
+    border: 2px solid @black;
+}
+
+div.header-details > div {
+    float: left;
+}
+
+div.header-date {
+    width: 50px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.header-date .day, .emission-details .day {
+    margin-top: 20px;
+    font-family: Reglo;
+    text-transform: uppercase;
+    font-size: @l*1.6;
+    line-height: 100%;
+}
+
+.header-date .day-number {
+    font-family: Reglo;
+    text-transform: uppercase;
+    font-size: @l*1.6;
+    line-height: 100%;
+}
+
+.header-date .time, .emission-details .time {
+    margin: 5px 0 10px 0;
+    font-family: Reglo;
+    text-transform: uppercase;
+    font-size: @s*1.2;
+    line-height: 100%;
+}
+
+div.header-outline {
+  width: 221px;
+    padding-right: 15px;
+    padding-left: 10px;
+}
+
+.header-outline h4 {
+    margin: 16px 0 10px 0;
+}
+
+.header-outline .credits dt {
+  letter-spacing:1px;
+    font-size: @s*1.1;
+  font-family: RE03;
+    line-height: 133%;
+}
+
+.header-outline .credits dd {
+  letter-spacing:1px;
+    font-size: @s;
+    font-family: RE01;
+    line-height: 150%;
+    float: left;
+    margin-left: 4px;
+}
+
+div.header-image {
+    width: 104px;
+    margin-right:10px;
+}
+
+div.header-controls {
+margin-top:15px;
+    width: 77px;
+    text-align: center;
+}
+
+div.header-controls .symbols {
+    font-family: RE06;
+    font-size: @xxl;
+    line-height: 70%;
+    -webkit-transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease;
+    cursor: pointer;
+}
+
+div.header-controls .symbols:hover {
+    color: @blue;
+    }
+
+
+
 .accordion {
-  margin-bottom: 50px;
-}
-.accordion .strip {
-  margin: 2px 0;
-  height: 20px;
-  background-color: black;
-}
-.accordion p {
-  color: white;
-  font-family: RE02;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 10px;
-  padding-top: 4px;
-}
+    margin-bottom:50px;
+    }
+
+.accordion .slide-out {
+    display: none;
+    }
+
+    
+ .accordion .strip {
+     margin:2px 0;
+     height:20px;
+    background-color: @black;
+    color: white;
+    font-family:RE02;
+    text-transform: uppercase;
+    letter-spacing:1px;
+    font-size:@xs;
+    padding-top:4px;
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease;
+    cursor: pointer;
+    }
+    
+.accordion .strip:hover {
+    background-color: @blue;
+    }
+    
 .accordion .symbol {
-  color: white;
-  font-size: 20px;
-  margin: 2px 5px;
+        color: white;
+        font-size:@l;
+        margin: 0px 5px;
 }
+
+.a-propos {
+    margin: 30px 10px;
+    }
+
+.a-propos p {
+    margin-bottom:15px;
+    }
+    
+.a-propos h4 {
+    margin:15px 0;
+    height: 12px;
+    background-color:@black;
+    color:white;
+    font-family:RE02;
+    padding:4px;
+    letter-spacing:1px;
+    font-size:@xs;
+    display:inline-block;
+    }
+    
+.a-propos dt {
+        font-family:RE03;
+    }
+
+.associated-sounds {
+    margin: 30px 0;
+    }
+    
+.associated-sounds h3 {
+    margin: 5px 10px 20px 10px;
+    font-family:RE02;
+    font-size:@m;
+    text-transform:uppercase;
+    }
+    
+.associated-sounds .symbols {
+    font-family:RE06;
+    font-size:@xl*1.3;
+    float: right;
+    line-height:50%;
+    -webkit-transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease;
+    cursor: pointer;
+    }
+    
+.associated-sounds .symbols:hover {
+	color:@blue;
+    }
+    
+.associated-sounds h4 {
+    margin: 0 10px 10px 10px;
+    font-family:RE03;
+    font-size:@m;
+    }
+    
+.associated-sounds dt {
+    font-family:RE03;
+    }
+    
+.associated-sounds p {
+    margin: 0 10px 15px 10px;
+    }
+
+.associated-sounds .cf {
+    margin: 0 10px 0px 10px;
+    }
+    
+.associated-sounds .soundWhite {
+    padding:20px 0;
+    }
+    
+.associated-sounds .soundGrey {
+    background-color:#D0D0D0;
+    padding:20px 0;
+    }
+    
+.emission-details {
+    float: left;
+    width: 300px;
+    margin-top: 10px;
+    }
+
+/**** Archives ****/
+
+div.header-dateArchives {
+    width: 55px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.header-dateArchives .day {
+    margin-top: 20px;
+    font-family: Reglo;
+    text-transform: uppercase;
+    font-size: @m*1.6;
+    line-height: 100%;
+}
+
+.header-dateArchives .day-number {
+    font-family: Reglo;
+    text-transform: uppercase;
+    font-size: @m*1.6;
+    line-height: 100%;
+}
+
+.header-dateArchives .time {
+    margin: 5px 0 10px 0;
+    font-family: Reglo;
+    text-transform: uppercase;
+    font-size: @xs*1.2;
+    line-height: 100%;
+}
+
+div.header-outlineArchives {
+  width: 223px;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+.header-outlineArchives h3 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: @m*1.1;
+    margin: 16px 0 5px 0;
+   font-family: RE03;
+   line-height: 115%;
+}
+
+.header-outlineArchives .credits dt {
+  letter-spacing:1px;
+    font-size: @s*1.1;
+  font-family: RE03;
+    line-height: 133%;
+}
+
+.header-outlineArchives .credits dd {
+  letter-spacing:1px;
+    font-size: @s;
+    font-family: RE01;
+    line-height: 150%;
+    float: left;
+    margin-left: 4px;
+}
+
+ul.tagsArchives {
+    margin-top:5px;
+    overflow:hidden;
+    margin-bottom:15px;
+}
+
+ul.tagsArchives li {
+    font-size: @xxs;
+    font-family: RE03;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    float: left;
+    border: 1px solid @black;
+    margin: 2px 2px;
+    padding: 3px 3px 0px 3px;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+div.header-controlsArchives {
+    margin-top:15px;
+    width: 185px;
+    text-align: center;
+    float:right;
+}
+div.header-controlsArchives .symbols {
+    font-family: RE06;
+    font-size: @xxl;
+    line-height: 70%;
+    -webkit-transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease;
+    cursor: pointer;
+}
+
+div.header-controlsArchives .symbols:hover {
+    color: @blue;
+    }
+
 /**** Breves ****/
+
+.breves, .content.breve {
+    color:@blue;
+    a, a:visited, a:active {
+        color:@blue;
+    }
+    a:hover{
+        color: lighten(@blue, 30%);
+    }
+}
+
+.breves a, .breves a:visited, .breves a:active {
+    color:@blue;
+    }
+.breves a:hover{
+    color: lighten(@blue, 30%);
+    }
+
 .breves {
-  width: 220px;
-  color: blue;
-  float: left;
-  margin-left: 60px;
-  margin-top: 12px;
+    width: 370px;
+    color: @blue;
+    float: left;
+    margin-left: 50px;
 }
+
 .breves img {
-  border: 2px solid blue;
+    border: 2px solid @blue;
 }
+
 .breves-header span {
-  background-color: blue;
-  color: white;
-  padding: 10px 12px;
-  height: 12px;
-  font-size: 12px;
-  font-family: RE03;
-  text-transform: uppercase;
-  display: inline-block;
+    background-color: @blue;
+    color: white;
+    padding: 10px @s;
+    height: @s;
+    font-size: @s;
+    font-family: RE03;
+    text-transform: uppercase;
+    display: inline-block;
 }
-.breves h3 {
-  font-family: RE03;
-  line-height: 115%;
-  font-size: 20px;
-  margin: 10px 0 5px 0;
+
+.breves h4 {
+  clear:both;
+    margin:10px 0 5px 0;
+    }
+    
+
+    
+.label p{
+  margin-top:5px;
+  margin-right:5px;
+  float:left;
+  text-decoration:underline;
+  }
+    
+.breves-big {
+    width:350px;
+    margin:0 10px;
+    float:left
 }
+    
+
+
+.breves-small {
+    width:165px;
+    margin:0 10px;
+    float:left
+    }
+
 .breves .suite {
-  margin: 10px 0 40px 0;
-  height: 20px;
-  width: 60px;
-  background-color: blue;
-}
+    margin:10px 0 40px 0;
+    height:20px;
+    width:124px;
+    background-color: @blue;
+    clear:both;
+    margin-left: 10px;
+    }
+    
 .breves .symbol {
-  margin: 2px 5px;
-  color: white;
-  font-size: 20px;
-}
+    margin:2px 5px;
+    color:white;
+    font-size:@l;
+    }
+
+
 .breves .suite p {
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: RE02;
-  font-size: 10px;
-  padding-top: 4px;
-}
+    color: white;
+    text-transform: uppercase;
+    letter-spacing:1px;
+    font-family: RE02;
+    font-size:@xs;
+    padding-top:4px;
+    }
+    
+    
 /**
  * For modern browsers
  * 1. The space content is one way to avoid an Opera bug when the
@@ -349,22 +800,20 @@ ul.tags li {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.cf:before,
-.cf:after {
-  content: " ";
-  /* 1 */
-
-  display: table;
-  /* 2 */
-
+.cf:before, .cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
 }
+
 .cf:after {
-  clear: both;
+    clear: both;
 }
+
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
 .cf {
-  *zoom: 1;
+    *zoom: 1;
 }
+
