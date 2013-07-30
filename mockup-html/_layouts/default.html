@@ -128,16 +128,24 @@
     }
     
     // add the class "active" to page currently being visited
-    $(".content nav li").each(function() {
+    $("nav.emission-menu li").each(function() {
         if ( noSlash($(this).children("a").attr('href')) === noSlash(document.location.pathname) ) { 
             $(this).addClass("active");
         };
     });
     
+    // Accordeon effect on the Emission details page
     $(".strip").click(function(e){
         e.preventDefault();
         $(this).next(".slide-out").slideToggle('easeInOutQuint');
     });
+    
+    // Links to tag search
+    $("ul.tags li").each(function(){
+        var link = 'search.html?tag=' + encodeURIComponent($(this).text());
+        var tag = '<a href="' + link + '">' + $(this).text() + '</a>'
+        $(this).html(tag);
+    })
 </script>
 </body>
 
