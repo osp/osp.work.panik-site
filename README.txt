@@ -1,5 +1,7 @@
-Radio Panik Site
-================
+HTML MOCKUP IN PROGRESS
+=======================
 
-Front-end design for the website of RADIO PANIK.
+( after having installed http://jekyllrb.com/ )
 
+cd mockup-html
+jekyll serve --watch
