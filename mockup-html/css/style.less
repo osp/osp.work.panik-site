@@ -15,6 +15,9 @@
 @xxl: 60px;
 @xxxl: 80px;
 
+@import "mixins";
+@import "forms";
+
 /* Mixins */
 
 .squash(@x, @y: 1) {
@@ -52,7 +55,7 @@ a {
 
 p {
     /*line-height: 1.2;*/
-    margin-bottom: 15px;
+    margin-bottom: @m;
     }
 
 img {
