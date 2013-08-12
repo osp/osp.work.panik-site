@@ -138,32 +138,7 @@
 
 </div>
 <script src="js/jquery-1.10.2.js"></script>
-<script>
-    var noSlash = function(path) {
-        elements = path.split('/');
-        return elements[elements.length - 1];
-    }
-    
-    // add the class "active" to page currently being visited
-    $("nav.emission-menu li").each(function() {
-        if ( noSlash($(this).children("a").attr('href')) === noSlash(document.location.pathname) ) { 
-            $(this).addClass("active");
-        };
-    });
-    
-    // Accordeon effect on the Emission details page
-    $(".strip").click(function(e){
-        e.preventDefault();
-        $(this).next(".slide-out").slideToggle('easeInOutQuint');
-    });
-    
-    // Links to tag search
-    $("ul.tags li").each(function(){
-        var link = 'search.html?tag=' + encodeURIComponent($(this).text());
-        var tag = '<a href="' + link + '">' + $(this).text() + '</a>'
-        $(this).html(tag);
-    })
-</script>
+<script src="js/panik.js"></script>
 </body>
 
 </html>
