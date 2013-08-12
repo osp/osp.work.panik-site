@@ -15,6 +15,8 @@
 @xxl: 60px;
 @xxxl: 80px;
 
+@wrapper-width: 220px + 60px + 708px + 60px + 220px;
+
 @import "mixins";
 @import "forms";
 
@@ -66,14 +68,15 @@ img {
 .extra-margin {
     margin-bottom: 16px;
     }
+    
 div.wrapper {
-    width: 220px + 60px + 708px + 60px + 220px;
+    width: @wrapper-width;
 }
 #metaNav {
     height: @l;
     }
 #siteNav > div {
-    margin-bottom: @l;
+    margin-bottom: -@m;
     float:left;
     }
     

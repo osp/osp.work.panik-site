@@ -280,10 +280,18 @@ select, select option {
 }
 
 input[type=text].fullwidth {
-    width: 100%;
+    width: @wrapper-width - 200px;
     height: @xl;
     font-size: @xl;
     border-radius: @s;
+}
+
+input[type=submit] {
+    margin-left: 20px;
+    width: 160px;
+    text-align: left;
+    border: none;
+    font-size: @l;
 }
 
 fieldset {
