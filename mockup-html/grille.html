@@ -2,121 +2,71 @@
 layout: default
 ---
 <style>
+    
     #grille {
         width: 90%;
     }
     #grille table, #grille tr, #grille td {
-        padding: 1px;
-        font-size: 10px;
-        color: #333333;
         text-align: center;
         vertical-align: middle;
     }
+    #grille .symbol {
+        font-size:40px;
+        width:100%;
+    }
     #grille table {
-        border-top: 1px dashed #CCCCCC;
-        border-left: 1px dashed #CCCCCC;
+        border-top: 5px solid #D0D0D0;
+        border-left: 5px solid #D0D0D0;
     }
     #grille td {
-        border-bottom: 1px dashed #CCCCCC;
-        border-right: 1px dashed #CCCCCC;
-    }
-    #grille b {
-    }
-    #grille a {
-        font-weight: bold;
-        text-decoration: none;
-    }
-    #grille a:hover {
-        text-decoration: underline;
-    }
-    #grille .jour {
-        height: 25px;
-        color: #999999;
+        border-bottom: 5px solid #D0D0D0;
+        border-right: 5px solid #D0D0D0;
     }
     #grille .heure {
-        height: 40px;
-        color: #999999;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);        
+        padding:20px 10px;
+        font-size:15px;
     }
-    #grille .forum {
-        background-color: #EEEEEE;
+    
+    
+    #grille .jour {
+        margin-top:20px;
+        margin-bottom:30px;
+
     }
-    .forum a, .forum a:hover {
-        color: #6E6E6E;
+     #grille .continu, #grille .communautaire, #grille .mix, #grille .info {
+        font-family:Reglo;
+        text-transform:uppercase;
+        font-size:15px;
+        margin-bottom:10px;
+        line-height: 100%;
     }
-    #grille .redif {
-        background-color: #EEFFEE;
+
+    #grille td:hover {
+        cursor: pointer;
+        background-color: #D0D0D0;
     }
-    .redif a, .redif a:hover {
-        color: #80FF80;
-    }
-    #grille .redif2 {
-        background-color: #FFCCFF;
-    }
-    .redif2 a, .redif2 a:hover {
-        color: #CC00CC;
-    }
-    #grille .creation {
-        background-color: #FFF6D9;
-    }
-    .creation a, .creation a:hover {
-        color: #FF9442;
-    }
-    #grille .mix {
-        background-color: #E3F3FF;
-    }
-    .mix a, .mix a:hover {
-        color: #80C9FF;
-    }
-    #grille .jardin {
-        background-color: #EEDEFF;
-    }
-    .jardin a, .jardin a:hover {
-        color: #B670FF;
-    }
-    #grille .echange {
-        background-color: #EBFFAF;
-    }
-    .echange a, .echange a:hover {
-        color: #6B8F01;
-    }
-    #grille .reprise {
-        background-color: #FFF9F0;
-    }
-    .reprise a, .reprise a:hover {
-        color: #FF9900;
-    }
-    #grille .pomme {
-        background-color: #EBFFEB;
-    }
-    .pomme a, .pomme a:hover {
-        color: #00B300;
-    }
-    #grille .jaune {
-        background-color: #FFFFC7;
-    }
-    .jaune a, .jaune a:hover {
-        color: #FFDF00;
-    }
-    #grille .entest, .entest a, .entest a:hover {
-        color: #666666;
-    }
+
 </style>
 <div id="grille" class="content">
     <header>
+        <div>
         <nav class="contextual-menu">
             <ul>
-                <li class="forum"><h5><a>Forum</a></h5></li>
-                <li class="redif"><h5><a>Redif</a></h5></li>
-                <li class="redif2"><h5><a>Redif2</a></h5></li>
-                <li class="creation"><h5><a class="active">Création</a></h5></li>
-                <li class="mix"><h5><a>Mix</a></h5></li>
-                <li class="jardin"><h5><a>Jardin</a></h5></li>
-                <li class="echange"><h5><a>Échange</a></h5></li>
-                <li class="reprise"><h5><a>Reprise</a></h5></li>
-                <li class="pomme"><h5><a>Pomme</a></h5></li>
+                <li> <h4 class="continu"><a>les créations</a></h4></li>
+                <li> <h4 class="continu"><a>les Agendas</a></h4></li>
+                <li> <h4 class="continu"><a>l'info</a></h4></li>
+                <li> <h4 class="continu"><a>les mixs</a></h4></li>
+                <li> <h4 class="continu"><a>les emissions communautaires</a></h4></li>
+                <li> <h4 class="continu"><a>la musique en continu</a></h4></li>
                 <li class="stretch"></li>
             </ul>
         </nav>
+        </div>
     </header>
     <table>
         <tbody>
@@ -124,13 +74,14 @@ layout: default
                 <td rowspan="1">
                 <br>
                 </td>
-                <td colspan="1" class="jour" width="13%"><b>Lundi</b></td>
-                <td colspan="1" class="jour" width="13%"><b>Mardi</b></td>
-                <td colspan="1" class="jour" width="13%"><b>Mercredi</b></td>
-                <td colspan="1" class="jour" width="13%"><b>Jeudi</b></td>
-                <td colspan="1" class="jour" width="13%"><b>Vendredi</b></td>
-                <td colspan="1" class="jour" width="13%"><b>Samedi</b></td>
-                <td colspan="1" class="jour" width="13%"><b>Dimanche</b></td>
+                <td colspan="1" width="13%"><h3 class="jour">lundi</h3></td>
+                <td colspan="1" width="13%"><h3 class="jour">mardi</h3></td>
+                <td colspan="1" width="13%"><h3 class="jour">mercredi</h3></td>
+                <td colspan="1" width="13%"><h3 class="jour">jeudi</h3></td>
+                <td colspan="1" width="13%"><h3 class="jour">vendredi</h3></td>
+                <td colspan="1" width="13%"><h3 class="jour">samedi</h3></td>
+                <td colspan="1" width="13%"><h3 class="jour">dimanche</h3></td>
+
                 <td rowspan="1">
                 <br>
                 </td>
@@ -138,15 +89,10 @@ layout: default
             <!-- 06:00 -->
             <tr>
                 <td class="heure">06:00</td>
-                <td colspan="7" rowspan="2" class="mix"><span style="font-style: italic;"></span><big>
-                    <br>
-                </big>05:00-07:30
-                <br>
-                <big><a style="font-style: italic;" href="spip.php?rubrique217">La Panique</a></big>
-                <br>
-                <span style="font-weight: bold;"></span><big><a href="spip.php?rubrique217">
-                    <br>
-                    </a></big></td>
+                <td colspan="7" rowspan="2">                
+                <h3 class="continu"><a href="#">La Panique</a></h3>
+                    <p>la musique en continu</p>
+                </td>
                 <td class="heure">06:00</td>
             </tr>
             <tr>
@@ -156,220 +102,173 @@ layout: default
             <!-- 07:00 -->
             <tr>
                 <td class="heure">07:00</td>
-                <td colspan="6" rowspan="1" class="mix"><big><a style="font-style: italic;" href="spip.php?rubrique217">La Panique</a></big><a href="spip.php?rubrique217"><big>
-                    <br>
-                </big></a><a href="http://www.radiopanik.org/"><span style="font-weight: bold;">
-                    <br>
-                </span></a></td>
-                <td colspan="1" rowspan="4" class="reprise">07:00-09:00
-                <br>
-                <b><a href="spip.php?rubrique4">Gospel Time</a></b></td>
+                <td colspan="6" rowspan="1" ><h3 class="continu"><a href="#">La Panique</a></h3>
+                    la musique en continu
+                </td>
+                <td colspan="1" rowspan="4"><h5>07:00-09:00</h5>
+                <h3 class="communautaire"><a href="#">Gospel Time</a></h3>
+                    <p>les émissions communautaires</p>
+                </td>
                 <td class="heure">07:00</td>
             </tr>
             <tr>
                 <td class="heure">07:30</td>
-                <td rowspan="5" class="reprise" colspan="1">07:30-10:00
-                <br>
-                <a href="spip.php?rubrique241">La tentative </a></td>
-                <td colspan="1" rowspan="2" class="pomme"><span style="color: rgb(255, 102, 102); font-weight: bold;"></span>07:30-08:30
-                <br>
-                <a href="http://www.radiopanik.org/spip/-L-agenda-militant,290-">L'agenda militant</a>
-                <br>
+                <td rowspan="5" colspan="1"><h5>07:30-10:00</h5>
+                <h3 class="mix"><a href="#">La tentative</a></h3>
+                    <p>Les Mixs</p>
                 </td>
-                <td class="jardin" colspan="1" rowspan="1"><a href="http://www.radiopanik.org/spip/-Le-croissant-fertile-">Le croissant</a>
-                <br>
-                <a href="http://www.radiopanik.org/spip/-Le-croissant-fertile-">fertile</a>
-                <br>
+                <td colspan="1" rowspan="2"><h5>07:30-08:30</h5>
+                <h3 class="info"><a href="#">L'agenda militant</a></h3>
+                    <p>L'info</p>
                 </td>
-                <td class="jardin" colspan="1" rowspan="1"><a href="http://www.radiopanik.org/spip/-Le-croissant-fertile-">Le croissant</a>
-                <br>
-                <a href="http://www.radiopanik.org/spip/-Le-croissant-fertile-">fertile</a>
-                <br>
+                <td colspan="1" rowspan="1"><h5>07:00-07:30</h5>
+                <h3 class="info"><a href="#">Le croissant fertile</a></h3>
+                    L'info
                 </td>
-                <td colspan="1" rowspan="1" class="pomme"><span style="color: rgb(255, 102, 102); font-weight: bold;"></span>07:30-09:00
-                <br>
-                <a href="http://www.radiopanik.org/spip/-SeulS-contre-TouT-">SeulS contre TouT</a>
-                <br>
-                (4e du mois) </td>
-                <td class="mix" colspan="1" rowspan="2"><a style="font-style: italic;" href="spip.php?rubrique217"><big>Matins tranquilles</big></a><a href="spip.php?rubrique217"><big>
-                    <br>
-                </big></a><a href="http://www.radiopanik.org/"><span style="font-weight: bold;">
-                    <br>
-                </span></a><a href="http://www.radiopanik.org/"><span style="font-weight: bold;"> </span></a></td>
+                <td colspan="1" rowspan="1"><h5>07:00-07:30</h5>
+                    <h3 class="info"><a href="#">Le croissant fertile</a></h3>
+                    <p>L'info</p>
+                </td>
+                <td colspan="1" rowspan="1"><h5>07:30-09:00</h5>
+                    <h3 class="info"><a href="#">seuls contre tout</a></h3><p>(4e du mois)</p><p>L'info</p>
+                </td>
+                <td colspan="1" rowspan="2">
+                    <h3 class="continu"><a href="#">Matins tranquilles</a></h3>
+                    <p>La musique en continu</p>
+                </td>
                 <td class="heure">07:30</td>
             </tr>
             <!-- 08:00 -->
             <tr>
                 <td class="heure">08:00</td>
-                <td style="vertical-align: top;" class="reprise" colspan="1" rowspan="2">
-                <br>
-                <br>
-                08:00-09:00
-                <br>
-                <a href="http://www.radiopanik.org/spip/-Sous-les-paves-Bruxelles-">Sous les pavés...Bruxelles</a>
-                <br>
-                (3e mercredi du mois)</td><td style="vertical-align: top;" class="reprise" colspan="1" rowspan="2">
-                <br>
-                <br>
-                08:00-09:00
-                <br>
-                <a href="http://www.radiopanik.org/spip/-Culturize-"><span style="font-weight: bold;">Culturize</span></a>
-                <br>
-                <br>
+                    <td colspan="1" rowspan="2"><h5>08:00-09:00</h5>
+                    <h4 class="continu"><a href="#">Sous les pavés...Bruxelles</a></h4>(3e mercredi du mois)
+                        <div class="symbol">N</div>
+
                 </td>
-                <td class="forum pomme" colspan="1" rowspan="2">08:00-09:00
-                <br>
-                <a href="http://www.radiopanik.org/spip/-La-Voix-de-la-Rue-">La voix de la rue</a>
-                <br>
-                (1er du mois)
-                <br>
-                <a href="http://www.radiopanik.org/spip/-Du-Pied-Gauche-">Du pied gauche</a>
-                <br>
-                (2e)
-                <br>
-                <a href="spip.php?rubrique98">Elles
-                en parlent encore</a>
-                <br>
-                (3e )
-                <br>
+                    <td colspan="1" rowspan="2"><h5>08:00-09:00</h5>
+                    <h3 class="continu"><a href="#">Culturize</a></h3>
+                        <div class="symbol">P</div>
+
+                </td>
+                <td colspan="1" rowspan="2"><h5>08:00-09:00</h5>
+                    <h3 class="continu"><a href="#">La voix de la rue</a></h3><p>(1er du mois)</p>
+                    <h3 class="continu"><a href="#">Du pied gauche</a></h3><p>(2e)</p>
+                    <h3 class="continu"><a href="">Elles en parlent encore</a></h3><p>(3e)</p>
+                        <div class="symbol">P</div>
+
                 </td>
                 <td class="heure">08:00</td>
             </tr>
             <tr>
                 <td class="heure">08:30</td>
-                <td style="vertical-align: top;" class="reprise" colspan="1" rowspan="3">
-                <br>
-                <br>
-                <br>
-                08:30-10:00
-                <br>
-                <a href="http://www.radiopanik.org/spip/-Le-Gant-de-toilette-">Le gant de toilette</a>
-                <br>
-                <a href="http://www.radiopanik.org/spip/-Le-Gant-de-toilette-"> </a></td>
-                <td style="vertical-align: top;" class="reprise">08:30-09:00
-                <br>
-                <a href="http://www.radiopanik.org/spip/-Comme-a-la-radio-">Comme à la radio</a>
-                <br>
-                (1er et 3e)
-                <br>
+                <td colspan="1" rowspan="3">08:30-10:00
+                <h4 class="continu"><a href="#">Le gant de toilette</a></h4>
+                    <div class="symbol">P</div>
+
+                <td><h5>08:30-09:00</h5>
+                <h4 class="continu"><a href="#">Comme à la radio</a></h4>(1er et 3e)
+                    <div class="symbol">P</div>
+
                 </td>
                 <td class="heure">08:30</td>
             </tr>
             <!-- 09:00 -->
             <tr>
                 <td class="heure">09:00</td>
-                <td class="reprise" colspan="1" rowspan="2">09:00-10:00
-                <br>
-                <a href="spip.php?rubrique221"></a><a href="http://www.radiopanik.org/spip/-Les-Esprits-imparfaits-">Les esprits imparfaits</a>
-                <br>
-                (2e et 4e)
-                <br>
+                <td colspan="1" rowspan="2"><h5>09:00-10:00</h5>
+                <h4 class="continu"><a href="#">Les esprits imparfaits</a></h4>(2e et 4e)
+                    <div class="symbol">P</div>
                 </td>
-                <td class="forum pomme" colspan="1" rowspan="2">09:00-10:00
-                <br>
-                <a href="spip.php?rubrique239">Samarc'ondes</a></td><td rowspan="2" class="jardin" colspan="1"><a href="http://www.radiopanik.org/spip/-Le-croissant-fertile-">Le croissant</a>
-                <br>
-                <a href="http://www.radiopanik.org/spip/-Le-croissant-fertile-">fertile</a></td><td colspan="1" rowspan="2" class="reprise">09:00-10:00
-                <br>
-                <a href="http://www.radiopanik.org/spip/-Radio-Nomade-"><b>Radio Nomade</b></a></td>
-                <td style="font-style: italic;" class="mix" colspan="1" rowspan="1"><a href="spip.php?rubrique217"><big>Matins tranquilles</big></a></td>
+                <td colspan="1" rowspan="2"><h5>09:00-10:00</5>
+                <h4 class="continu"><a href="#">Samarc'ondes</a></h4>
+                    <div class="symbol">P</div>
+                </td>
+                <td rowspan="2" colspan="1">
+                <h4 class="continu"><a href="#">Le croissant fertile</a></h4>
+                    <div class="symbol">P</div>
+                </td>
+                
+                <td colspan="1" rowspan="2"><h5>09:00-10:00</h5>
+                <h4 class="continu"><a href="#">Radio Nomade</a></h4>
+                    <div class="symbol">P</div>
+                </td>
+                <td colspan="1" rowspan="1">
+                <h4 class="continu"><a href="#">Matins tranquilles</a></h4>
+                    <div class="symbol">P</div>
+                </td>
                 <td class="heure">09:00</td>
             </tr>
             <tr>
                 <td class="heure">09:30</td>
-                <td colspan="1" rowspan="3" class="pomme"><span style="color: rgb(255, 102, 102); font-weight: bold;"></span>09:30-11:00
-                <br>
-                <a href="http://www.radiopanik.org/spip/-MANGE-TA-SOUPE-">Mange ta soupe !</a>
-                <br>
-                (2 dimanches par mois)
-                <br>
-                <span style="color: rgb(255, 102, 102); font-weight: bold;"></span>
-                <br>
+                <td colspan="1" rowspan="3"><h5>09:30-11:00</h5>
+                <h4 class="continu"><a href="#">Mange ta soupe !</a></h4>(2 dimanches par mois)
+                    <div class="symbol">P</div>
                 </td>
                 <td class="heure">09:30</td>
             </tr>
             <!-- 10:00 -->
             <tr>
                 <td class="heure">10:00</td>
-                <td colspan="1" rowspan="1" class="mix"><big style="font-style: italic;"><a href="spip.php?rubrique217">Up Beat Tempo</a></big><a href="spip.php?rubrique217"><big style="font-style: italic;">
-                    <br>
-                </big></a></td>
-                <td rowspan="3" class="reprise" colspan="1">10:00-11:30
-                <br>
-                <a href="http://www.radiopanik.org/spip/-Radio-Mukambo-">Radio Mukambo
-                <br>
-                </a></td>
-                <td colspan="1" rowspan="1" class="mix"><big style="font-style: italic;"><a href="spip.php?rubrique217">Up Beat Tempo</a></big><a href="spip.php?rubrique217"><big style="font-style: italic;">
-                    <br>
-                </big></a><a href="spip.php?rubrique217"><big style="font-style: italic;"> </big></a></td><td colspan="1" rowspan="2" class="reprise">10:00-11:00
-                <br>
-                <a href="http://www.radiopanik.org/spip/-Le-Dictionnaire-Du-Rock-n-Roll-"><span style="font-weight: bold;"></span></a><a href="http://www.radiopanik.org/spip/-Drache-Musicale-">Drache Musicale</a>
-                <br>
+                <td colspan="1" rowspan="1"><h5>09:30-10:00</h5>
+                <h4 class="continu"><a href="#">Up Beat Tempo</a></h4>
+                    <div class="symbol">P</div>
+                </td>
+                <td rowspan="3" colspan="1"><h5>10:00-11:30</h5>
+                <h4 class="continu"><a href="#">Radio Mukambo</a></h4>
+                    <div class="symbol">P</div>
+                </td>
+                <td colspan="1" rowspan="1">
+                <h4 class="continu"><a href="#">Up Beat Tempo</a></h4>
+                    <div class="symbol">P</div>
+                </td>
+                <td colspan="1" rowspan="2"><h5>10:00-11:00</h5>
+                <h4 class="continu"><a href="#">Drache Musicale</a></h4>
                 ou
-                <br>
-                10:00-12:00
-                <br>
-                <a href="http://www.radiopanik.org/spip/-Jardins-secrets-">Jardins secrets</a>
-                <br>
-                (rediffusions)
-                <br>
+                <h5>10:00-12:00</h5>
+                <h4 class="continu"><a href="#">Jardins secrets</a></h4>(rediffusions)
+                    <div class="symbol">P</div>
                 </td>
-                <td colspan="1" rowspan="2" class="reprise">10:00-11:00
-                <br>
-                <a href="http://www.radiopanik.org/spip/-Le-Dictionnaire-Du-Rock-n-Roll-"><span style="font-weight: bold;">Le Dictionnaire Du </span></a>
-                <br>
-                <a href="http://www.radiopanik.org/spip/-Le-Dictionnaire-Du-Rock-n-Roll-"><span style="font-weight: bold;">Rock'n'Roll</span></a>
-                <br>
+                <td colspan="1" rowspan="2"><h5>10:00-11:00</h5>
+                <h4 class="continu"><a href="#">Le Dictionnaire Du Rock'n'Roll</a></h4>
+                    <div class="symbol">P</div>
                 </td>
-                <td colspan="1" rowspan="2" class="reprise">10:00-11:00
-                <br>
-                <a href="http://www.radiopanik.org/spip/-Soul-driver-"><span style="font-weight: bold;">Soul driver</span></a>
-                <br>
+                <td colspan="1" rowspan="2"><h5>10:00-11:00</h5>
+                <h4 class="continu"><a href="#">Soul driver</a></h4>
+                    <div class="symbol">P</div>
                 </td>
                 <td class="heure">10:00</td>
             </tr>
             <tr>
                 <td class="heure">10:30</td>
-                <td rowspan="3" class="reprise" colspan="1">10:30-12:00
-                <br>
-                <a href="spip.php?rubrique76">Yellow Vitamines</a></td><td colspan="1" rowspan="3" class="reprise">10:30-12:00
-                <br>
-                <a href="http://www.radiopanik.org/spip/-Lo-Fi-Stories-">LoFi 0.0</a>
-                <br>
-                (1er et 3e du mois)
-                <br>
-                <a href="http://www.radiopanik.org/spip/-49-Rue-Saint-Josse-">49 rue Saint-Josse</a>
-                <br>
-                (2e)
-                <br>
-                <a href="spip.php?rubrique217"><big style="font-style: italic;"> </big></a><big> </big></td>
+                <td rowspan="3"colspan="1"><h5>10:30-12:00</h5>
+                <h4 class="continu"><a href="#">Yellow Vitamines</a></h4>
+                    <div class="symbol">P</div>
+                </td>
+                <td colspan="1" rowspan="3"><h5>10:30-12:00</h5>
+                <h4 class="continu"><a href="#">LoFi 0.0</a></h4>(1er et 3e du mois)
+                <h4 class="continu"><a href="#">49 rue Saint-Josse</a></h4>(2e)
+                    <div class="symbol">P</div>
+                </td>
                 <td class="heure">10:30</td>
             </tr>
             <!-- 11:00 -->
             <tr>
                 <td class="heure">11:00</td>
-                <td colspan="1" rowspan="2" class="mix"><big style="font-style: italic;"><a href="spip.php?rubrique217">Up Beat Tempo</a></big><a href="spip.php?rubrique217"><big style="font-style: italic;">
-                    <br>
-                </big></a><a href="spip.php?rubrique217"><big style="font-style: italic;"> </big></a></td>
-                <td colspan="1" rowspan="2" class="forum pomme">11:00-12:00<a href="spip.php?rubrique162">
-                <br>
-                </a><a href="http://www.radiopanik.org/spip/-L-emission-masquee-">L'émission masquée</a>
-                <br>
-                (3e du mois)
-                <br>
-                <span style="font-weight: bold; color: rgb(255, 102, 102);"> </span></td>
-                <td colspan="1" rowspan="2" class="forum pomme">11:00-12:00
-                <br>
-                <a href="spip.php?rubrique98">Elles
-                en parlent encore</a>
-                <br>
-                (4e&nbsp;du mois)
-                <br>
-                </td><td colspan="1" rowspan="2" class="reprise">11:00-12:00
-                <br>
-                <a href="http://www.radiopanik.org/spip/-La-Grece-qui-voyage-">La Grèce qui voyage</a>
-                <br>
-                <a href="spip.php?rubrique35"><b> </b></a></td>
+                <td colspan="1" rowspan="2">
+                <h4 class="continu"><a href="#">Up Beat Tempo</a></h4>
+                    <div class="symbol">P</div>
+                </td>
+                <td colspan="1" rowspan="2"><h5>11:00-12:00</h5>
+                <h4 class="continu"><a href="#">L'émission masquée</a></h4>(3e du mois)
+                <td colspan="1" rowspan="2"><h5>11:00-12:00</h5>
+                <h4 class="continu"><a href="#">Elles en parlent encore</a></h4>(4e&nbsp;du mois)
+                    <div class="symbol">P</div>
+                </td>
+                <td colspan="1" rowspan="2"><h5>11:00-12:00</h5>
+                <h4 class="continu"><a href="#">La Grèce qui voyage</a></h4>
+                    <div class="symbol">P</div>
+                </td>
                 <td class="heure">11:00</td>
             </tr>
             <tr>
