@@ -15,7 +15,10 @@
 @xxl: 60px;
 @xxxl: 80px;
 
-@wrapper-width: 220px + 60px + 708px + 60px + 220px;
+@player-width: 210px;
+@content-width: 498px;
+@breves-width: 370px;
+@wrapper-width: @player-width + 60px + @content-width + 50px + @breves-width;
 
 @import "mixins";
 @import "forms";
@@ -84,6 +87,7 @@ img {
     
 div.wrapper {
     width: @wrapper-width;
+    .clearfix
 }
 #metaNav {
     height: @l;
@@ -92,7 +96,10 @@ div.wrapper {
     margin-bottom: -@m;
     float:left;
     }
-    
+
+#advanced > div {
+    float: left;
+}
 
 #siteNav h2 {
     font-size: 120px;
@@ -101,21 +108,27 @@ div.wrapper {
     .squash(.5);
     }
 .menuMedia {
-    color:@orange;
-    width:210px;
+    color: @orange;
+    width: @player-width;
+    a, a:active, a:visited {
+        color: @orange;
     }
+}
 
 .menuEmissions {
-    color:@black;
-    width:498px;
+    color: @black;
+    width: @content-width;
     margin-left:60px;
-    }
+}
 
 .menuNews {
-    color:@blue;
-    width:370px;
-    margin-left:58px;
+    color: @blue;
+    width: @breves-width;
+    margin-left:50px;
+    a, a:active, a:visited {
+      color: @blue;
     }
+}
 
 
 h1 {
@@ -127,7 +140,7 @@ h1 {
 h2 {
     font-size: @m;
 }
-h3 {
+h3, input[type=submit], input[type=text].fullwidth {
     font-family: Reglo;
     text-transform:uppercase;
     .squash(1, 2);
@@ -135,6 +148,7 @@ h3 {
     line-height: 110%;
     margin-bottom: 48px;
 }
+
 h4 {
    font-size: @m*1.1;
    font-family: RE03;
@@ -217,12 +231,13 @@ ul.tags li {
     float: left;
 }
 
+
 /**** Player ****/
 
 .player {
     color: @orange;
     float: left;
-    width: 210px;
+    width: @player-width;
     
 }
 
@@ -291,11 +306,14 @@ ul.tags li {
 /**** Emission / Content ****/
 
 div.content {
-    width: 498px;
+    width: @content-width;
     float: left;
     margin-left: 60px;
 }
 
+div.content.wide {
+    width: 498px + 50px + 370px;
+}
 /* The h1 needs to be two times bigger, than it’s containing box, because with the matrix transform we’re going to squash it in 2 */
 .content h1 {
     width: 996px;    
@@ -719,7 +737,7 @@ div.header-controlsArchives .symbols {
 }
 
 .breves {
-    width: 370px;
+    width: @breves-width;
     float: left;
     margin-left: 50px;
 }

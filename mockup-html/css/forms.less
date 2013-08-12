@@ -267,12 +267,26 @@ label {
         // so we can put text above the inputs.
         display: block;
     }
+    .inline {
+        display: inline-block;
+    }
+    h5.inline {
+        margin-left: @s;
+    }
 }
 
 input, select {
     text-transform: uppercase;
-    border: 1px solid black;
+    border: 1px solid lighten(@black, 80%);
     background: #fff;
+}
+
+select {
+    height: 20px;
+}
+
+input[type=text] {
+    height: 16px;
 }
 
 select, select option {
@@ -281,7 +295,7 @@ select, select option {
 
 input[type=text].fullwidth {
     width: @wrapper-width - 200px;
-    height: @xl;
+    padding-left: @s;
     font-size: @xl;
     border-radius: @s;
 }
@@ -294,10 +308,14 @@ input[type=submit] {
     font-size: @l;
 }
 
+input[type=submit], input[type=text].fullwidth {
+    height: 21px;
+}
+
 fieldset {
     margin-bottom: @l;
 }
 
-#advanced, .hide {
+#advanced {
     display: none;
 }

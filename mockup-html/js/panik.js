@@ -21,8 +21,6 @@ $("#toggle-advanced-search-options").click(function(e){
     $("#advanced").slideToggle('easeInOutQuint');
 });
 
-$("#advanced").organicTabs();
-
 // Links to tag search
 $("ul.tags li").each(function(){
     var link = 'search.html?tag=' + encodeURIComponent($(this).text());
@@ -35,3 +33,4 @@ $("#breves-content a").click(function(e){
     e.preventDefault();
     $("#breves-content").load("breve.html .breve");
 });
+
