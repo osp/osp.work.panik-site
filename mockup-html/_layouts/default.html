@@ -93,7 +93,7 @@
         
         {{ content }}
     
-
+    {% unless page.wide %}
     <div class="breves">
        <div>
             <nav class="contextual-menu">
@@ -140,6 +140,7 @@
         <div class="suite"><span class="symbol">K</span><p>suite des news</p></div>
         
         </div>
+        {% endunless %}
     </div>
 
 </div>
