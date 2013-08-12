@@ -267,11 +267,17 @@ label {
         // so we can put text above the inputs.
         display: block;
     }
+    .inline {
+        display: inline-block;
+    }
+    h5.inline {
+        margin-left: @s;
+    }
 }
 
 input, select {
     text-transform: uppercase;
-    border: 1px solid black;
+    border: 1px solid lighten(@black, 80%);
     background: #fff;
 }
 
@@ -298,6 +304,6 @@ fieldset {
     margin-bottom: @l;
 }
 
-#advanced, .hide {
+#advanced {
     display: none;
 }
