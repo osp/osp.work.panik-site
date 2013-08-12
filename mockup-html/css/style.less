@@ -58,7 +58,20 @@ a {
 p {
     /*line-height: 1.2;*/
     margin-bottom: @m;
+    a {
+        text-decoration: underline
     }
+    }
+    
+em {
+    font-family:RE03;
+}
+
+blockquote {
+    padding-left:15px;
+    font-family:RE03;
+    margin-bottom: @m;
+}
 
 img {
     border: 2px solid @black;
@@ -124,9 +137,10 @@ h3 {
 }
 h4 {
    font-size: @m*1.1;
-  font-family: RE03;
+   font-family: RE03;
   line-height: 115%;
   text-transform: inherit;
+  margin-bottom:@m;
     }
 
 h5 {
@@ -134,6 +148,14 @@ h5 {
     text-transform: uppercase;
     font-size: @s;
     margin-bottom:3px;
+}
+
+ul, ol, dl {
+    margin: 0 0 @m @m;
+}
+
+dl {
+    .clearfix
 }
 
 dt {
@@ -153,6 +175,7 @@ dt:after {
 
 dl.metadata dt {
     clear: none;
+    margin: 0;
 }
 
 dl.metadata dd {
@@ -160,7 +183,7 @@ dl.metadata dd {
     }
 
 ul.tags {
-    margin-top:10px;
+    margin: 10px 0 0 0;
     overflow:hidden;
     margin-bottom:15px;
 }
@@ -320,12 +343,17 @@ a, .menuEmissions a, a:visited, .menuEmissions a:visited, a:active, .menuEmissio
 .mainHeader nav ul li {
     float: left;
     display: inline;
+    width:50%;
 }
 
 nav.contextual-menu {
     text-align: justify;
     text-justify: distribute-all-lines;
     margin-bottom:15px;
+    
+    ul {
+        margin: 0;
+    }
     
     li {
         display: inline-block;
@@ -355,7 +383,7 @@ nav.contextual-menu {
 .emission .mainHeader nav a:link, .mainHeader nav a:visited {
     color: @black;
     display: inline-block;
-    width: 166px;
+    width: 249px;
     padding: 20px 0px;
     height: 15px;
     text-transform: uppercase;
@@ -713,7 +741,7 @@ div.header-controlsArchives .symbols {
 
 .breves h4 {
   clear:both;
-    margin:10px 0 5px 0;
+    margin:10px 0 16px 0;
     }
     
 
@@ -764,6 +792,22 @@ div.header-controlsArchives .symbols {
     padding-top:4px;
     }
     
+.breves-image {
+    position: relative;
+}
+    
+.breves .trans {
+    text-transform: uppercase;
+    font-family: Reglo;
+    letter-spacing:1px;
+    font-size:@m;
+    background-color:@blue;
+    position: absolute;
+    left:10px;
+    top:-5px;
+    color:white;
+    padding:5px 7px 0px 7px;
+}
     
 /**
  * For modern browsers
