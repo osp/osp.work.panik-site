@@ -18,10 +18,10 @@
                 "display": "none"
             }); 
             
-            base.$nav.delegate("li > a", "click", function() {
-            
+            base.$nav.delegate("li a", "click", function() {
+                console.log("click!");
                 // Figure out current list via CSS class
-                var curList = base.$el.find("a.current").attr("href").substring(1),
+                var curList = base.$el.find("a.active").attr("href").substring(1),
                 
                 // List moving to
                     $newList = $(this),
@@ -32,13 +32,14 @@
                 // Set outer wrapper height to (static) height of current inner list
                     $allListWrap = base.$el.find(".list-wrap"),
                     curListHeight = $allListWrap.height();
-                console.log(curList);
+                console.log(curList, listID);
                 $allListWrap.height(curListHeight);
                                         
                 if ((listID != curList) && ( base.$el.find(":animated").length == 0)) {
                                             
+                                            console.log("we are gonna try")
                     // Fade out current list
-                    base.$el.find("#fieldset-"+curList).fadeOut(base.options.speed, function() {
+                    base.$el.find("#fieldsets-"+curList).fadeOut(base.options.speed, function() {
                         
                         // Fade in new list on callback
                         base.$el.find("#fieldsets-"+listID).fadeIn(base.options.speed);
@@ -50,8 +51,8 @@
                         });
                         
                         // Remove highlighting - Add to just-clicked tab
-                        base.$el.find(".nav li a").removeClass("current");
-                        $newList.addClass("current");
+                        base.$el.find(".nav li a").removeClass("active");
+                        $newList.addClass("active");
                             
                     });
                     
@@ -67,7 +68,7 @@
     };
     
     $.organicTabs.defaultOptions = {
-        "speed": 300
+        "speed": 100
     };
     
     $.fn.organicTabs = function(options) {
