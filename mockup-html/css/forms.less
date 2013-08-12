@@ -281,13 +281,21 @@ input, select {
     background: #fff;
 }
 
+select {
+    height: 20px;
+}
+
+input[type=text] {
+    height: 16px;
+}
+
 select, select option {
     text-transform: none;
 }
 
 input[type=text].fullwidth {
     width: @wrapper-width - 200px;
-    height: @xl;
+    padding-left: @s;
     font-size: @xl;
     border-radius: @s;
 }
@@ -298,6 +306,10 @@ input[type=submit] {
     text-align: left;
     border: none;
     font-size: @l;
+}
+
+input[type=submit], input[type=text].fullwidth {
+    height: 21px;
 }
 
 fieldset {
