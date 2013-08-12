@@ -11,12 +11,18 @@ layout: default
             </ul></nav>
         </header>
         <div class="subHeader">
-            <h5><a href="#">Dernier episode</a></h5>
+            <nav class="contextual-menu">
+                <ul>
+                    <li><h5><a class="active">dernière émission</a></h5></li>
+                    <li><h5><a>précédente</a></h5></li>
+                    <li><h5><a>suivante</a></h5></li>
+                    <li><h5><a>écoutable</a></h5></li>
+                    <li><h5><a>archives</a></h5></li>
+                </ul>
+            </nav>
             <h3>Fevrier 2013</h3>
-            <hr/>
         </div>
         {% include archive-item-emission.html %}
-         <hr/>
 
        <div class="accordion">
             <div class="strip"><span class="symbol">K</span>A propos de l’épisode</div>

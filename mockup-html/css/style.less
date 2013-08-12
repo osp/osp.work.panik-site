@@ -35,7 +35,7 @@
     -webkit-transition-property: color;
     -webkit-transition-duration: 0.2s;
     -webkit-transition-timing-function: ease;
-    };
+    }
 
 /* Styles that apply everywhere */
 
@@ -291,6 +291,7 @@ a, .menuEmissions a, a:visited, .menuEmissions a:visited, a:active, .menuEmissio
 .emission .mainHeader {
     overflow: hidden;
     border-bottom: 3px solid @black;
+    margin-bottom:0.5em;
 }
 
 .emission .mainHeader nav {
@@ -330,9 +331,11 @@ nav.contextual-menu {
     }
     li h5 {
         font-family: Reglo;
+        margin-right:5px;
     }
     li a.active, li a:hover {
-        text-decoration: underline;
+        text-decoration: none;
+        border-bottom: 3px solid;
         color: inherit;
     }
     li a:hover {
@@ -365,6 +368,7 @@ nav.contextual-menu {
 
 .subHeader {
     margin: 0;
+    border-bottom: 3px solid @black;
 }
 
 div.header-details {
@@ -478,12 +482,12 @@ margin-top:15px;
     letter-spacing:1px;
     font-size:@xs;
     padding-top:4px;
-    .focusFade;
+    .focusFade();
     cursor: pointer;
     }
     
 .accordion .strip:hover {
-    background-color: @blue;
+    background-color: @black;
     }
     
 .accordion .symbol {
@@ -545,25 +549,44 @@ margin-top:15px;
 
 /**** Archives ****/
 
+div.header-detailsArchives {
+    padding-top:10px;
+    min-height: 30px;
+    border-bottom: 1px solid #000000;
+    overflow:hidden;
+}
+
 div.header-dateArchives {
-    width: 55px;
+    width: 65px;
     text-align: center;
     margin-right: 5px;
+    float: left;
 }
 
 .header-dateArchives .day {
-    margin-top: 20px;
-    font-family: Reglo;
+    font-family: RE03;
     text-transform: uppercase;
-    font-size: @m*1.6;
+    font-size: @s;
     line-height: 100%;
+    margin-right:5px;
+    float: left;
 }
 
 .header-dateArchives .day-number {
-    font-family: Reglo;
+    font-family: RE03;
     text-transform: uppercase;
-    font-size: @m*1.6;
+    font-size: @s;
     line-height: 100%;
+    margin-right:5px;
+    float: left;
+}
+
+.header-dateArchives .year {
+    font-family: RE03;
+    text-transform: uppercase;
+    font-size: @s;
+    line-height: 100%;
+    float: left;
 }
 
 .header-dateArchives .time {
@@ -572,23 +595,36 @@ div.header-dateArchives {
     text-transform: uppercase;
     font-size: @xs*1.2;
     line-height: 100%;
+    float:left;
 }
 
 div.header-outlineArchives {
-  width: 223px;
+    width: 345px;
     padding-right: 20px;
     padding-left: 10px;
+    float:left;
 }
 
-.header-outlineArchives h3 {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    font-size: @m*1.1;
-    margin: 16px 0 5px 0;
+.header-outlineArchives h5 {
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   font-size: @s;
+   margin: 0px 0 5px 0;
    font-family: RE03;
    line-height: 115%;
 }
+
+.header-outlineArchives p {
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   font-size: @s;
+   margin: 0px 0 5px 0;
+   font-family: RE02;
+   line-height: 115%;
+}
+
 
 .header-outlineArchives .credits dt {
   letter-spacing:1px;
@@ -626,10 +662,17 @@ ul.tagsArchives li {
 }
 
 div.header-controlsArchives {
-    margin-top:15px;
-    width: 185px;
+    margin-top:0px;
+    width: 50px;
     text-align: center;
-    float:right;
+    float:left;
+}
+
+div.header-controlsArchives .symbols {
+    font-size:@xl;
+    width:20px;
+    margin-right:5px;
+    float:left;
 }
 
 
