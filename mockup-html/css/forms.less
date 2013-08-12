@@ -16,14 +16,7 @@
 // ==========================================================================
 
 //
-// Define consistent border, margin, and padding.
-//
 
-fieldset {
-    border: 1px solid #c0c0c0;
-    margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em;
-}
 
 //
 // 1. Correct `color` not being inherited in IE 8/9.
@@ -162,28 +155,11 @@ textarea {
 //
 // Restyle and baseline non-control form elements.
 
-fieldset {
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
 
-legend {
-    display: block;
-    width: 100%;
-    padding: 0;
-    margin-bottom: @m;
-    font-size: @s;
-    line-height: inherit;
-    color: lighten(@black, 20%);;
-    border: 0;
-    border-bottom: 1px solid @black;
-}
 
 label {
     display: inline-block;
     margin-bottom: 5px;
-    font-weight: bold;
 }
 
 
@@ -281,5 +257,36 @@ input[type="number"] {
 .checkbox-inline + .checkbox-inline {
     margin-top: 0;
     margin-left: 10px; // space out consecutive inline controls
+}
+
+/* And the rest is Eric & Seb, AGPLv3*/
+
+label {
+    text-transform: uppercase;
+    input, select {
+        // so we can put text above the inputs.
+        display: block;
+    }
+}
+
+input, select {
+    text-transform: uppercase;
+    border: 1px solid black;
+    background: #fff;
+}
+
+select, select option {
+    text-transform: none;
+}
+
+input[type=text].fullwidth {
+    width: 100%;
+    height: @xl;
+    font-size: @xl;
+    border-radius: @s;
+}
+
+fieldset {
+    margin-bottom: @l;
 }
 
