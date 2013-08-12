@@ -28,4 +28,10 @@ $("ul.tags li").each(function(){
     var link = 'search.html?tag=' + encodeURIComponent($(this).text());
     var tag = '<a href="' + link + '">' + $(this).text() + '</a>'
     $(this).html(tag);
-})
+});
+
+// Link to a breve doesn’t open in a new page, but is loaded into the thing
+$("#breves-content a").click(function(e){
+    e.preventDefault();
+    $("#breves-content").load("breve.html .breve");
+});
