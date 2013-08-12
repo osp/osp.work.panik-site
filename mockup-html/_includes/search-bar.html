@@ -1,3 +1,112 @@
-<form>
+<form id="search" action="recherche.html" method="get">
+    <fieldset>
+        <input type="text" class="fullwidth" placeholder="Radio Panik" /><input type="submit" value="Rechercher" />
+    </fieldset>
     
+    <label>Options avancées
+        <input type="checkbox" id="toggle-advanced-search-options" />
+    </label>
+    
+    <div id="advanced">
+        <nav class="contextual-menu">
+            <ul class="nav">
+                <li><h5><a href="#media" class="current">Media</a></h5></li>
+                <li><h5><a href="#emission">Emission</a></h5></li>
+                <li><h5><a href="#breves">Breves</a></h5></li>
+            </ul>
+        </nav>
+        
+        <div id="fieldsets-media">
+            <fieldset>
+                <label>Format
+                    <select>
+                        <option>WAV</option>
+                        <option>OGG</option>
+                    </select>
+                </label>
+                <label>Date
+                    <input type="date" />
+                </label>
+            </fieldset>
+        </div>
+        
+        <div id="fieldsets-emission" class="hide">
+            <fieldset id="fieldset">
+                <label>Emission
+                    <input type="text" placeholder="Emission"/>
+                </label>
+                <label>Episode
+                    <input type="text" placeholder="Episode"/>
+                </label>
+                <label>Serie
+                    <input type="text" placeholder="Serie"/>
+                </label>
+                <label>Auteur
+                    <input type="text" placeholder="Auteur"/>
+                </label>
+                <label>Date
+                    <input type="date" />
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <label>Genre
+                    <select>
+                        <option></option> <!-- It the select doesn’t have multiple, by default the first will be selected…
+                                            That’s why we in this case we add an empty field. -->
+                        <option>Épigramme</option>
+                        <option>Serventois</option>
+                        <option>Roman industriel</option>
+                        <option>Épopée</option>
+                        <option>Tragicomédie</option>
+                    </select>
+                </label>
+                <label>Format
+                    <select multiple size="5">
+                        <option>Aucune transmission d'information</option>
+                        <option>Télégraphie pour réception auditive</option>
+                        <option>Télégraphie pour réception automatique</option>
+                        <option>Fac-similé</option>
+                        <option>Transmission de données</option>
+                    </select>
+                </label>
+                <label>Couleur
+                    <select>
+                        <option></option> <!-- It the select doesn’t have multiple, by default the first will be selected…
+                                            That’s why we in this case we add an empty field. -->
+                        <option>Rouge naphtol</option>
+                        <option>Laque écarlate</option>
+                        <option>Laque d’alizarine</option>
+                        <option>Magenta/violet quinacridone</option>
+                        <option>Blanc de zinc</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <label>Chercher que des émissions avec des sons associés
+                    <input type="checkbox" />
+                </label>
+            </fieldset>
+        </div>
+        
+        <div id="fieldsets-breves" class="hide">
+            <fieldset>
+                <label>Label
+                    <select>
+                        <option></option> <!-- It the select doesn’t have multiple, by default the first will be selected…
+                                            That’s why we in this case we add an empty field. -->
+                        <option>La rédaction</option>
+                        <option>CP</option>
+                        <option>Technique</option>
+                        <option>CA</option>
+                        <option>Fêtes</option>
+                        <option>Emissions</option>
+                    </select>
+                </label>
+                <label>Date
+                    <input type="date" />
+                </label>
+            </fieldset>
+        </div>
+    </div>
 </form>
