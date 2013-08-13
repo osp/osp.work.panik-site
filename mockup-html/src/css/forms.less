@@ -146,9 +146,7 @@ textarea {
 
 /* And the rest is Eric & Seb, AGPLv3*/
 
-form {
-    .clearfix
-}
+
 label {
     display: inline-block;
     margin-bottom: 5px;
@@ -204,20 +202,16 @@ input[type=text].fullwidth {
     width: 200px; //@wrapper-width - 200px;
     padding-left: @s;
     font-size: @xl;
-    border-radius: @s;
     display: inline-block;
 }
 
 input[type=submit] {
     margin-left: 20px;
-    width: 160px;
     text-align: left;
     border: none;
     font-size: @l;
-}
-
-input[type=submit], input[type=text].fullwidth {
-    height: 21px;
+    background-color: @black;
+    color: #fff;
 }
 
 fieldset {
@@ -225,22 +219,19 @@ fieldset {
 }
 
 input[type=submit], input[type=text].fullwidth {
+    height: 12px;
     font-family: Reglo;
     text-transform:uppercase;
     .squash(1, 2);
-    font-size: @l*1.2;
+    font-size: @s*1.2;
     line-height: 110%;
-    margin-top: -9px;
-    // margin-bottom: 48px;
-}
-
-input[type=submit] {
-    background-color: @black;
-    color: #fff;
+    // margin-top: -9px;
+    float: right;
 }
 
 #toggle-advanced-search-options {
     display: inline-block;
+    float: right;
 }
 
 #advanced {

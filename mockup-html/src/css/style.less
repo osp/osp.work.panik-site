@@ -3,6 +3,7 @@
 @black: #000000;
 @orange: #FF6633;
 @blue: #0000FF;
+@white: #FFFFFF;
 
 /* SIZES*/
 
@@ -46,7 +47,7 @@
 /* Styles that apply everywhere */
 
 body {
-    background-color: white;
+    background-color: @white;
     color: #000305;
     font-size: @s;
     font-family: RE01;
@@ -67,7 +68,7 @@ p {
     a {
         text-decoration: underline
     }
-    }
+}
     
 em {
     font-family:RE03;
@@ -95,7 +96,8 @@ div.wrapper {
 #metaNav {
     height: @l;
     background-color:@black;
-    padding:19px 15px 15px 15px;
+    padding: 1px;
+    height: 32px;
     }
     
 #metaNav ul li h5 a{
@@ -105,7 +107,6 @@ div.wrapper {
     }
 
 #siteNav > div {
-    margin-bottom: -@m;
     float:left;
     }
 
@@ -162,6 +163,16 @@ h3 {
     font-size: @l*1.2;
     line-height: 110%;
     margin-bottom: 48px;
+}
+#metaNav h3 {
+    font-size: @s*1.2;
+    margin-bottom: 0;
+    a {
+        color: darken(@white, 2%);
+    }
+    a:hover {
+        color: @white;
+    }
 }
 
 h4 {
@@ -444,6 +455,11 @@ nav.contextual-menu {
     display: inline-block;
 }
 
+#metaNav nav.contextual-menu {
+    li a:active, li a:hover {
+        border: none;
+    }
+}
 .emission .mainHeader nav a:link, .mainHeader nav a:visited {
     color: @black;
     display: inline-block;
