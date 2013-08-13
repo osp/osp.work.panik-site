@@ -2,24 +2,21 @@
 layout: default
 ---
     <div class="content emission">
-        <nav class="contextual-menu" style="float:left;">
+        <nav class="contextual-menu">
                 <ul>
+                    <li><h5><a>&lt; précédent</a></h5></li>
+                    <li><h5><a>suivant &gt;</a></h5></li>
                     <li><h5><a class="active">dernier épisode</a></h5></li>
-                    <li><h5><a>archives</a></h5></li>
-                </ul>
-            </nav>
-            <nav class="contextual-menu" >
-                <ul>
-                    <li><h5><a>&lt;précédent</a></h5></li>
-                    <li><h5><a>suivant&gt;</a></h5></li>
+                    <li><h5><a href="recherche.html">archives</a></h5></li>
+                    <li><h5><a href="emission-about.html">à propos de l'émission</a></li>
                 </ul>
             </nav>
         <header class="mainHeader">
             <h1>les matins tranquilles</h1>
-            <nav class="emission-menu"><ul>
+<!--            <nav class="emission-menu"><ul>
                 <li><a href="emission.html">Episode</a></li>
                 <li><a href="emission-about.html">L'emission</a></li>
-            </ul></nav>
+        </ul></nav>-->
         </header>
         <div class="subHeader">
             
@@ -80,11 +77,11 @@ layout: default
             <div class="strip"><span class="symbol">K</span>Chat room</div>
             <div class="strip associated-sounds"><span class="symbol">K</span>Sons Associés</div>
             <div class="slide-out associated-sounds">
-                <h3>(32) Sons associés à la episode (97min) 
+                <h4>(32) Sons associés à la episode (97min) 
                 <span class=symbols>A</span>
                 <span class=symbols>B</span>
                 <span class=symbols>I</span>
-                <span class=symbols>C</span></h3>
+                <span class=symbols>C</span></h4>
                 
                 {% include archive-item-media.html %}
                 

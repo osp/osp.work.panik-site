@@ -183,6 +183,10 @@ ul, ol, dl {
     margin: 0 0 @m @m;
 }
 
+.content ul, ol, dl {
+    margin: 0 0 0 0;
+}
+
 dl {
     .clearfix
 }
@@ -303,7 +307,7 @@ ul.tags li {
     font-size: @xxl;
     line-height: 80%;
     text-align: center;
-    margin: 70px 0 15px 0;
+    margin: 0px 0 15px 0;
     border-top: 3px solid @orange;
 }
 
@@ -373,7 +377,6 @@ a, .menuEmissions a, a:visited, .menuEmissions a:visited, a:active, .menuEmissio
 
 .emission .mainHeader {
     overflow: hidden;
-    border-bottom: 3px solid @black;
     margin-bottom:1.5em;
 }
 
@@ -440,6 +443,9 @@ nav.contextual-menu {
     
 }
 
+.emission nav.contextual-menu li h5 {
+        margin-right:13px;
+}
 
 
 .emission .mainHeader nav a:link, .mainHeader nav a:visited {
@@ -456,7 +462,7 @@ nav.contextual-menu {
 }
 
 .subHeader {
-    height: 75px;
+    height: 25px;
     margin: 0;
 }
 
@@ -633,7 +639,7 @@ margin-top:15px;
     
 .emission-details {
     float: left;
-    width: 300px;
+    width: 200px;
     margin-top: 10px;
     }
 
