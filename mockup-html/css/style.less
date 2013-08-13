@@ -146,7 +146,9 @@ h1 {
     font-family: Reglo;
     text-transform: uppercase;
     .squash(0.5);
+    line-height:116%;
     }
+    
 h2 {
     font-size: @m;
 }
@@ -351,6 +353,10 @@ div.content.wide {
 .content h1 {
     width: 996px;    
     }
+    
+.content h3 {
+    margin-bottom:30px;
+    }
 
 a, .menuEmissions a, a:visited, .menuEmissions a:visited, a:active, .menuEmissions a:active {
     color: lighten(@black, 20%);
@@ -404,6 +410,7 @@ nav.contextual-menu {
 
     ul {
         margin: 0;
+        display: inline-block;
     }
     
     li {
@@ -417,7 +424,7 @@ nav.contextual-menu {
         text-decoration: none;
         border-bottom: 3px solid;
         color: inherit;
-    }
+    } 
     li a:hover {
         cursor: pointer;
     }
@@ -425,7 +432,7 @@ nav.contextual-menu {
         width: 100%;
         display: inline-block;
         font-size: 0;
-        line-height: 0
+        line-height: 0;
     }
     
 }
@@ -448,10 +455,10 @@ nav.contextual-menu {
 .subHeader {
     height: 75px;
     margin: 0;
-    border-bottom: 3px solid @black;
 }
 
 div.header-details {
+    border-top: 3px solid @black;
     min-height: 100px;
 }
 
