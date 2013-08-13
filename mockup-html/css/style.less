@@ -91,7 +91,16 @@ div.wrapper {
 }
 #metaNav {
     height: @l;
+    background-color:@black;
+    padding:19px 15px 15px 15px;
     }
+    
+#metaNav ul li h5 a{
+    color:white;
+    margin-right:10px;
+    letter-spacing:1px;
+    }
+
 #siteNav > div {
     margin-bottom: -@m;
     float:left;
@@ -107,6 +116,7 @@ div.wrapper {
     text-transform: uppercase;
     .squash(.5);
     }
+    
 .menuMedia {
     color: @orange;
     width: @player-width;
@@ -214,14 +224,25 @@ ul.tags li {
     border-radius: 7px;
     -moz-border-radius: 7px;
 }
+.player-top {
+  position: relative;
+}
 
 .direct {
     text-transform: uppercase;
-    font-family: RE02;
-    font-size: @m;
-    float: left;
-    padding-top: 38px;
-    padding-left: 3px;
+    font-family: Reglo;
+    letter-spacing:1px;
+    font-size:@m;
+    
+}
+
+.absolute {
+    background-color:@orange;
+    position: absolute;
+    left:10px;
+    top:-5px;
+    color:white;
+    padding:5px 7px 0px 7px;
 }
 
 .symbol {
@@ -229,6 +250,16 @@ ul.tags li {
     font-size: @xxl*1.5;
     line-height: 80%;
     float: left;
+}
+
+.symbol-absolute {
+    position:absolute;
+    font-family: RE06;
+    font-size: @xxl*2;
+    line-height: 80%;
+    float: left;
+    top:21px;
+    left:68px;
 }
 
 
@@ -267,7 +298,8 @@ ul.tags li {
     font-size: @xxl;
     line-height: 80%;
     text-align: center;
-    margin: 15px 0;
+    margin: 70px 0 15px 0;
+    border-top: 3px solid @orange;
 }
 
 .player hr {
@@ -300,6 +332,7 @@ ul.tags li {
     border: 2px solid @orange;
     float:left;
     margin-right:10px;
+    margin-bottom:10px;
     }
 
 
@@ -332,7 +365,7 @@ a, .menuEmissions a, a:visited, .menuEmissions a:visited, a:active, .menuEmissio
 .emission .mainHeader {
     overflow: hidden;
     border-bottom: 3px solid @black;
-    margin-bottom:0.5em;
+    margin-bottom:1.5em;
 }
 
 .emission .mainHeader nav {
@@ -367,8 +400,8 @@ a, .menuEmissions a, a:visited, .menuEmissions a:visited, a:active, .menuEmissio
 nav.contextual-menu {
     text-align: justify;
     text-justify: distribute-all-lines;
-    margin-bottom:15px;
-    
+    margin-bottom:34px;
+
     ul {
         margin: 0;
     }
@@ -394,6 +427,7 @@ nav.contextual-menu {
         font-size: 0;
         line-height: 0
     }
+    
 }
 
 
@@ -412,6 +446,7 @@ nav.contextual-menu {
 }
 
 .subHeader {
+    height: 75px;
     margin: 0;
     border-bottom: 3px solid @black;
 }
