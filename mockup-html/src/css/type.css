@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'RE01';
+    src: url('../reglo/RE01.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RE02';
+    src: url('../reglo/RE02-Medium.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RE03';
+    src: url('../reglo/RE03-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RE04';
+    src: url('../reglo/RE04-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RE05';
+    src: url('../reglo/RE05-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RE06';
+    src: url('../reglo/RE06.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Reglo';
+    src: url('../reglo/Reglo-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
