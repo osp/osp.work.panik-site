@@ -1,0 +1,99 @@
+<form id="advanced-search-form" action="recherche.html" method="get">
+    <div id="advanced">
+        <div id="fieldsets-media" class="menuMedia">
+            <label><input type="checkbox" checked class="inline"><h5 class="inline">Media</h5></label>
+            <fieldset>
+                <label>Format
+                    <select>
+                        <option>WAV</option>
+                        <option>OGG</option>
+                    </select>
+                </label>
+                <label>Date
+                    <input type="date" />
+                </label>
+            </fieldset>
+        </div>
+        
+        <div id="fieldsets-emission" class="menuEmissions">
+            <label><input type="checkbox" checked class="inline"><h5 class="inline">Emission</h5></label>
+            <fieldset id="fieldset">
+                <label>Emission
+                    <input type="text" placeholder="Emission"/>
+                </label>
+                <label>Episode
+                    <input type="text" placeholder="Episode"/>
+                </label>
+                <label>Serie
+                    <input type="text" placeholder="Serie"/>
+                </label>
+                <label>Auteur
+                    <input type="text" placeholder="Auteur"/>
+                </label>
+                <label>Date
+                    <input type="date" />
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <label>Genre
+                    <select>
+                        <option></option> <!-- It the select doesn’t have multiple, by default the first will be selected…
+                                            That’s why we in this case we add an empty field. -->
+                        <option>Épigramme</option>
+                        <option>Serventois</option>
+                        <option>Roman industriel</option>
+                        <option>Épopée</option>
+                        <option>Tragicomédie</option>
+                    </select>
+                </label>
+                <label>Format
+                    <select multiple size="5">
+                        <option>Aucune transmission d'information</option>
+                        <option>Télégraphie pour réception auditive</option>
+                        <option>Télégraphie pour réception automatique</option>
+                        <option>Fac-similé</option>
+                        <option>Transmission de données</option>
+                    </select>
+                </label>
+                <label>Couleur
+                    <select>
+                        <option></option> <!-- It the select doesn’t have multiple, by default the first will be selected…
+                                            That’s why we in this case we add an empty field. -->
+                        <option>Rouge naphtol</option>
+                        <option>Laque écarlate</option>
+                        <option>Laque d’alizarine</option>
+                        <option>Magenta/violet quinacridone</option>
+                        <option>Blanc de zinc</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <label>Chercher que des émissions avec des sons associés
+                    <input type="checkbox" />
+                </label>
+            </fieldset>
+        </div>
+        
+        <div id="fieldsets-breves" class="menuNews">
+            <label><input type="checkbox" checked class="inline"><h5 class="inline">Breves</h5></label>
+            <fieldset>
+                <label>Label
+                    <select>
+                        <option></option> <!-- It the select doesn’t have multiple, by default the first will be selected…
+                                            That’s why we in this case we add an empty field. -->
+                        <option>La rédaction</option>
+                        <option>CP</option>
+                        <option>Technique</option>
+                        <option>CA</option>
+                        <option>Fêtes</option>
+                        <option>Emissions</option>
+                    </select>
+                </label>
+                <label>Date
+                    <input type="date" />
+                </label>
+            </fieldset>
+        </div>
+    </div>
+</form>

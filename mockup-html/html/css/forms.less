@@ -206,11 +206,10 @@ input[type=text].fullwidth {
 }
 
 input[type=submit] {
-    margin-left: 20px;
     text-align: left;
     border: none;
     font-size: @l;
-    background-color: @black;
+    background-color: lighten(@black, 10%);
     color: #fff;
 }
 
@@ -229,6 +228,9 @@ input[type=submit], input[type=text].fullwidth {
     float: right;
 }
 
+#search-form {
+    display: inline;
+}
 #toggle-advanced-search-options {
     display: inline-block;
     float: right;

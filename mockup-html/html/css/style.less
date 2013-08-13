@@ -95,7 +95,7 @@ div.wrapper {
 }
 #metaNav {
     height: @l;
-    background-color:@black;
+    background-color: lighten(@black, 10%);
     padding: 1px;
     height: 32px;
     }
@@ -189,7 +189,15 @@ h5 {
     font-size: @s;
     margin-bottom:3px;
 }
-
+#metaNav h5 {
+    a {
+        color: darken(@white, 2%);
+    }
+    a:hover {
+        cursor: pointer;
+        color: @white;
+    }
+}
 ul, ol, dl {
     margin: 0 0 @m @m;
 }
