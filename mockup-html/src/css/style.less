@@ -1,0 +1,897 @@
+/* COLORS */
+
+@black: #000000;
+@orange: #FF6633;
+@blue: #0000FF;
+
+/* SIZES*/
+
+@xxs: 8px;
+@xs: 10px;
+@s: 12px;
+@m: 16px;
+@l: 20px;
+@xl: 36px;
+@xxl: 60px;
+@xxxl: 80px;
+
+@player-width: 210px;
+@content-width: 498px;
+@breves-width: 370px;
+@wrapper-width: @player-width + 60px + @content-width + 50px + @breves-width;
+
+@import "mixins";
+@import "forms";
+
+/* Mixins */
+
+.squash(@x, @y: 1) {
+    transform: scale(@x, @y);
+    -webkit-transform: scale(@x, @y);
+    -moz-transform: scale(@x, @y);
+    -ms-transform: scale(@x, @y);
+    -o-transform: scale(@x, @y);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    }
+
+.focusFade {
+    -webkit-transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease;
+    }
+
+/* Styles that apply everywhere */
+
+body {
+    background-color: white;
+    color: #000305;
+    font-size: @s;
+    font-family: RE01;
+    line-height: 1.5;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0px 10px;
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    /*line-height: 1.2;*/
+    margin-bottom: @m;
+    a {
+        text-decoration: underline
+    }
+    }
+    
+em {
+    font-family:RE03;
+}
+
+blockquote {
+    padding-left:15px;
+    font-family:RE03;
+    margin-bottom: @m;
+}
+
+img {
+    border: 2px solid @black;
+    margin-right: 10px;
+}
+
+.extra-margin {
+    margin-bottom: 16px;
+    }
+    
+div.wrapper {
+    width: @wrapper-width;
+    .clearfix
+}
+#metaNav {
+    height: @l;
+    background-color:@black;
+    padding:19px 15px 15px 15px;
+    }
+    
+#metaNav ul li h5 a{
+    color:white;
+    margin-right:10px;
+    letter-spacing:1px;
+    }
+
+#siteNav > div {
+    margin-bottom: -@m;
+    float:left;
+    }
+
+#advanced > div {
+    float: left;
+}
+
+#siteNav h2 {
+    font-size: 120px;
+    font-family: Reglo;
+    text-transform: uppercase;
+    .squash(.5);
+    }
+    
+.menuMedia {
+    color: @orange;
+    width: @player-width;
+    a, a:active, a:visited {
+        color: @orange;
+    }
+}
+
+.menuEmissions {
+    color: @black;
+    width: @content-width;
+    margin-left:60px;
+}
+
+.menuNews {
+    color: @blue;
+    width: @breves-width;
+    margin-left:50px;
+    a, a:active, a:visited {
+      color: @blue;
+    }
+}
+
+
+h1 {
+    font-size: @l*3;
+    font-family: Reglo;
+    text-transform: uppercase;
+    .squash(0.5);
+    line-height:116%;
+    }
+    
+h2 {
+    font-size: @m;
+}
+h3, input[type=submit], input[type=text].fullwidth {
+    font-family: Reglo;
+    text-transform:uppercase;
+    .squash(1, 2);
+    font-size: @l*1.2;
+    line-height: 110%;
+    margin-bottom: 48px;
+}
+
+h4 {
+   font-size: @m*1.1;
+   font-family: RE03;
+  line-height: 115%;
+  text-transform: inherit;
+  margin-bottom:@m;
+    }
+
+h5 {
+    font-family: RE03;
+    text-transform: uppercase;
+    font-size: @s;
+    margin-bottom:3px;
+}
+
+ul, ol, dl {
+    margin: 0 0 @m @m;
+}
+
+dl {
+    .clearfix
+}
+
+dt {
+    float: left;
+    clear: left;
+    font-family:RE03;
+}
+
+dd {
+    float: left;
+   margin-left: 4px; 
+}
+
+dt:after {
+    content: ":";
+}
+
+dl.metadata dt {
+    clear: none;
+    margin: 0;
+}
+
+dl.metadata dd {
+    margin-right: 4px;
+    }
+
+ul.tags {
+    margin: 10px 0 0 0;
+    overflow:hidden;
+    margin-bottom:15px;
+}
+
+ul.tags li {
+    font-size: @xxs*1.1;
+    font-family: RE03;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    float: left;
+    border: 1px solid @black;
+    margin: 2px 2px;
+    padding: 3px 3px 0px 3px;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+.player-top {
+  position: relative;
+}
+
+.direct {
+    text-transform: uppercase;
+    font-family: Reglo;
+    letter-spacing:1px;
+    font-size:@m;
+    
+}
+
+.absolute {
+    background-color:@orange;
+    position: absolute;
+    left:10px;
+    top:-5px;
+    color:white;
+    padding:5px 7px 0px 7px;
+}
+
+.symbol {
+    font-family: RE06;
+    font-size: @xxl*1.5;
+    line-height: 80%;
+    float: left;
+}
+
+.symbol-absolute {
+    position:absolute;
+    font-family: RE06;
+    font-size: @xxl*2;
+    line-height: 80%;
+    float: left;
+    top:21px;
+    left:68px;
+}
+
+
+/**** Player ****/
+
+.player {
+    color: @orange;
+    float: left;
+    width: @player-width;
+    
+}
+
+.player a, .player a:visited, .player a:active {
+    color: lighten(@orange, 20%);
+    }
+
+.player .date {
+    font-size: @m;
+    clear: both;
+    margin-top:5px;
+}
+
+.player .meta {
+        font-size: @m;
+    }
+
+.player .time {
+    font-family: RE01;
+    font-size: @m;
+    line-height: 115%;
+    margin-bottom:12px;
+}
+
+.player .controls {
+    font-family: RE06;
+    font-size: @xxl;
+    line-height: 80%;
+    text-align: center;
+    margin: 70px 0 15px 0;
+    border-top: 3px solid @orange;
+}
+
+.player hr {
+    height: 1px;
+    border: 0;
+    border-top: 3px solid @orange;
+}
+
+.previousNext {
+    margin: 40px 0 16px 0;
+    height: 22px;
+    }
+    
+.previousNext .symbol {
+    width:50px;
+    height: 22px;
+    background-color:@orange;
+    color:white;
+    font-size:@l;
+    text-align:center;
+    margin-right:2px;
+    padding-top:6px;
+    }
+    
+.playlist .item {
+    margin:20px 0;
+    }
+    
+.playlist img {
+    border: 2px solid @orange;
+    float:left;
+    margin-right:10px;
+    margin-bottom:10px;
+    }
+
+
+/**** Emission / Content ****/
+
+div.content {
+    width: @content-width;
+    float: left;
+    margin-left: 60px;
+}
+
+div.content.wide {
+    width: 498px + 50px + 370px;
+}
+/* The h1 needs to be two times bigger, than it’s containing box, because with the matrix transform we’re going to squash it in 2 */
+.content h1 {
+    width: 996px;    
+    }
+    
+.content h3 {
+    margin-bottom:30px;
+    }
+
+a, .menuEmissions a, a:visited, .menuEmissions a:visited, a:active, .menuEmissions a:active {
+    color: lighten(@black, 20%);
+    }
+
+.content hr {
+    display: block;
+    height: 1px;
+    border-top: 3px solid @black;
+}
+
+.emission .mainHeader {
+    overflow: hidden;
+    border-bottom: 3px solid @black;
+    margin-bottom:1.5em;
+}
+
+.emission .mainHeader nav {
+    height: 65px;
+    margin-top: 20px;
+}
+
+.emission .mainHeader nav ul {
+    font-size: @l;
+    font-family: Reglo;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+    transform : scale(1,2);
+    -webkit-transform:scale(1,2);
+    -moz-transform:scale(1,2);
+    -ms-transform:scale(1,2);
+    -o-transform:scale(1,2);
+    line-height:1%;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    letter-spacing:1px;
+}
+
+.mainHeader nav ul li {
+    float: left;
+    display: inline;
+    width:50%;
+}
+
+nav.contextual-menu {
+    text-align: justify;
+    text-justify: distribute-all-lines;
+    margin-bottom:34px;
+
+    ul {
+        margin: 0;
+        display: inline-block;
+    }
+    
+    li {
+        display: inline-block;
+    }
+    li h5 {
+        font-family: Reglo;
+        margin-right:5px;
+    }
+    li a.active, li a:hover {
+        text-decoration: none;
+        border-bottom: 3px solid;
+        color: inherit;
+    } 
+    li a:hover {
+        cursor: pointer;
+    }
+    .stretch {
+        width: 100%;
+        display: inline-block;
+        font-size: 0;
+        line-height: 0;
+    }
+    
+}
+
+
+
+.emission .mainHeader nav a:link, .mainHeader nav a:visited {
+    color: @black;
+    display: inline-block;
+    width: 249px;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.mainHeader nav a:hover, mainHeader nav a:active, .mainHeader nav .active a:link, .mainHeader nav .active a:visited {
+    color: white;
+    background-color: @black;
+}
+
+.subHeader {
+    height: 75px;
+    margin: 0;
+}
+
+div.header-details {
+    border-top: 3px solid @black;
+    min-height: 100px;
+}
+
+div.header-details img {
+    margin-top: 17px;
+    border: 2px solid @black;
+}
+
+div.header-details > div {
+    float: left;
+}
+
+div.header-date {
+    width: 50px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.header-date .day, .emission-details .day {
+    margin-top: 20px;
+    font-family: Reglo;
+    text-transform: uppercase;
+    font-size: @l*1.6;
+    line-height: 100%;
+}
+
+.header-date .day-number {
+    font-family: Reglo;
+    text-transform: uppercase;
+    font-size: @l*1.6;
+    line-height: 100%;
+}
+
+.header-date .time, .emission-details .time {
+    margin: 5px 0 10px 0;
+    font-family: Reglo;
+    text-transform: uppercase;
+    font-size: @s*1.2;
+    line-height: 100%;
+}
+
+div.header-outline {
+  width: 221px;
+    padding-right: 15px;
+    padding-left: 10px;
+}
+
+.header-outline h4 {
+    margin: 16px 0 10px 0;
+}
+
+.header-outline .credits dt {
+  letter-spacing:1px;
+    font-size: @s*1.1;
+  font-family: RE03;
+    line-height: 133%;
+}
+
+.header-outline .credits dd {
+  letter-spacing:1px;
+    font-size: @s;
+    font-family: RE01;
+    line-height: 150%;
+    float: left;
+    margin-left: 4px;
+}
+
+div.header-image {
+    width: 104px;
+    margin-right:10px;
+}
+
+div.header-controls {
+margin-top:15px;
+    width: 77px;
+    text-align: center;
+}
+
+.symbols {
+    font-family: RE06;
+    font-size: @xxl;
+    line-height: 70%;
+    cursor: pointer;
+}    
+
+.symbols:hover {
+    color: @blue;
+    }
+
+
+
+.accordion {
+    margin-bottom:50px;
+    }
+
+.accordion .slide-out {
+    display: none;
+    }
+
+    
+ .accordion .strip {
+     margin:2px 0;
+     height:20px;
+    background-color: @black;
+    color: white;
+    font-family:RE02;
+    text-transform: uppercase;
+    letter-spacing:1px;
+    font-size:@xs;
+    padding-top:4px;
+    .focusFade();
+    cursor: pointer;
+    }
+    
+.accordion .strip:hover {
+    background-color: @black;
+    }
+    
+.accordion .symbol {
+        color: white;
+        font-size:@l;
+        margin: 0px 5px;
+}
+
+.a-propos {
+    margin: 30px 10px;
+    }
+
+.a-propos p {
+    margin-bottom:15px;
+    }
+    
+.a-propos h4 {
+    margin:15px 0;
+    height: 12px;
+    background-color:@black;
+    color:white;
+    font-family:RE02;
+    padding:4px;
+    letter-spacing:1px;
+    font-size:@xs;
+    display:inline-block;
+    }
+    
+
+
+.associated-sounds {
+    margin: 30px 0;
+    .symbols {
+        font-size:@xl*1.3;
+        float: right;
+        line-height:50%;
+    }
+    .soundGrey {
+        background-color:#D0D0D0;
+    }
+   div.item {
+       margin-top: 20px;
+       padding: 10px;
+       }
+    h3 {
+        margin-bottom:30px;
+    }
+    }
+
+
+
+
+    
+.emission-details {
+    float: left;
+    width: 300px;
+    margin-top: 10px;
+    }
+
+/**** Archives ****/
+
+div.header-detailsArchives {
+    padding-top:10px;
+    min-height: 30px;
+    border-bottom: 1px solid #000000;
+    overflow:hidden;
+}
+
+div.header-dateArchives {
+    width: 65px;
+    text-align: center;
+    margin-right: 5px;
+    float: left;
+}
+
+.header-dateArchives .day {
+    font-family: RE03;
+    text-transform: uppercase;
+    font-size: @s;
+    line-height: 100%;
+    margin-right:5px;
+    float: left;
+}
+
+.header-dateArchives .day-number {
+    font-family: RE03;
+    text-transform: uppercase;
+    font-size: @s;
+    line-height: 100%;
+    margin-right:5px;
+    float: left;
+}
+
+.header-dateArchives .year {
+    font-family: RE03;
+    text-transform: uppercase;
+    font-size: @s;
+    line-height: 100%;
+    float: left;
+}
+
+.header-dateArchives .time {
+    margin: 5px 0 10px 0;
+    font-family: Reglo;
+    text-transform: uppercase;
+    font-size: @xs*1.2;
+    line-height: 100%;
+    float:left;
+}
+
+div.header-outlineArchives {
+    width: 345px;
+    padding-right: 20px;
+    padding-left: 10px;
+    float:left;
+}
+
+.header-outlineArchives h5 {
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   font-size: @s;
+   margin: 0px 0 5px 0;
+   font-family: RE03;
+   line-height: 115%;
+}
+
+.header-outlineArchives p {
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   font-size: @s;
+   margin: 0px 0 5px 0;
+   font-family: RE02;
+   line-height: 115%;
+}
+
+
+.header-outlineArchives .credits dt {
+  letter-spacing:1px;
+    font-size: @s*1.1;
+  font-family: RE03;
+    line-height: 133%;
+}
+
+.header-outlineArchives .credits dd {
+  letter-spacing:1px;
+    font-size: @s;
+    font-family: RE01;
+    line-height: 150%;
+    float: left;
+    margin-left: 4px;
+}
+
+ul.tagsArchives {
+    margin-top:5px;
+    overflow:hidden;
+    margin-bottom:15px;
+}
+
+ul.tagsArchives li {
+    font-size: @xxs;
+    font-family: RE03;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    float: left;
+    border: 1px solid @black;
+    margin: 2px 2px;
+    padding: 3px 3px 0px 3px;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+div.header-controlsArchives {
+    margin-top:0px;
+    width: 50px;
+    text-align: center;
+    float:left;
+}
+
+div.header-controlsArchives .symbols {
+    font-size:@xl;
+    width:20px;
+    margin-right:5px;
+    float:left;
+}
+
+
+
+/**** Breves ****/
+
+.breves, .content.breve {
+    color:@blue;
+    a, a:visited, a:active {
+        color:@blue;
+    }
+    a:hover{
+        color: lighten(@blue, 30%);
+    }
+}
+
+.breves {
+    width: @breves-width;
+    float: left;
+    margin-left: 50px;
+}
+
+.breves img {
+    border: 2px solid @blue;
+}
+
+.breves-header span {
+    background-color: @blue;
+    color: white;
+    padding: 10px @s;
+    height: @s;
+    font-size: @s;
+    font-family: RE03;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.breves h4 {
+  clear:both;
+    margin:10px 0 16px 0;
+    }
+    
+
+    
+.label p{
+  margin-top:5px;
+  margin-right:5px;
+  float:left;
+  text-decoration:underline;
+  }
+    
+.breves-big {
+    width:350px;
+    margin:0 10px;
+    float:left
+}
+    
+
+
+.breves-small {
+    width:165px;
+    margin:0 10px;
+    float:left
+    }
+
+.breves .suite {
+    margin:10px 0 40px 0;
+    height:20px;
+    width:124px;
+    background-color: @blue;
+    clear:both;
+    margin-left: 10px;
+    }
+    
+.breves .symbol {
+    margin:2px 5px;
+    color:white;
+    font-size:@l;
+    }
+
+
+.breves .suite p {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing:1px;
+    font-family: RE02;
+    font-size:@xs;
+    padding-top:4px;
+    }
+    
+.breves-image {
+    position: relative;
+}
+    
+.breves .trans {
+    text-transform: uppercase;
+    font-family: Reglo;
+    letter-spacing:1px;
+    font-size:@m;
+    background-color:@blue;
+    position: absolute;
+    left:10px;
+    top:-5px;
+    color:white;
+    padding:5px 7px 0px 7px;
+}
+    
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before, .cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
