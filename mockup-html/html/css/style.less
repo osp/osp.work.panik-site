@@ -905,11 +905,22 @@ div.header-controlsArchives .symbols {
 
 /* TOOLTIPS */
 
-.grille-tip {
-    width: @content-width;
-    //display: none;
+/* cf http://cdnjs.cloudflare.com/ajax/libs/qtip2/2.1.1/basic/jquery.qtip.css */
+
+.qtip {
+    min-width: @content-width;
+    max-width: @content-width;
+    border: 1px solid @black;
 }
 
+.qtip-content{
+    padding: 0;
+}
+
+.qtip-default{
+    background-color: @white;
+    color: @black;
+}
 /**
  * For modern browsers
  * 1. The space content is one way to avoid an Opera bug when the
