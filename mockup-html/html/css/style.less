@@ -1,6 +1,6 @@
 /* COLORS */
 
-@black: #000000;
+@black: #202020;
 @orange: #FF6633;
 @blue: #0000FF;
 @white: #FFFFFF;
@@ -48,7 +48,7 @@
 
 body {
     background-color: @white;
-    color: #000305;
+    color: @black;
     font-size: @s;
     font-family: RE01;
     line-height: 1.5;
@@ -94,14 +94,13 @@ div.wrapper {
     .clearfix
 }
 #metaNav {
-    height: @l;
     background-color: lighten(@black, 10%);
     padding: 1px;
     height: 32px;
     }
     
 #metaNav ul li h5 a{
-    color:white;
+    color:@white;
     margin-right:10px;
     letter-spacing:1px;
     }
@@ -156,6 +155,7 @@ h1 {
 h2 {
     font-size: @m;
 }
+
 h3 {
     font-family: Reglo;
     text-transform:uppercase;
@@ -164,24 +164,32 @@ h3 {
     line-height: 110%;
     margin-bottom: 48px;
 }
+
 #metaNav h3 {
-    font-size: @s*1.2;
+    color: #F0F0F0;
+    font-family: RE02;
+    font-size: @s*1.1;
+    .squash(1, 1);
+    padding-left: 10px;
+    margin-right: 10px;
     margin-bottom: 0;
+    margin-top: 11px;
+    letter-spacing:1px;
     a {
-        color: darken(@white, 2%);
+        color: #E8E8E8;
     }
     a:hover {
-        color: @white;
+        color: darken(#C8C8C8, 2%);
     }
 }
 
 h4 {
-   font-size: @m*1.1;
-   font-family: RE03;
-  line-height: 115%;
-  text-transform: inherit;
-  margin-bottom:@m;
-    }
+    font-size: @m*1.1;
+    font-family: RE03;
+    line-height: 115%;
+    text-transform: inherit;
+    margin-bottom:@m;
+}
 
 h5 {
     font-family: RE03;
@@ -269,7 +277,7 @@ ul.tags li {
     position: absolute;
     left:10px;
     top:-5px;
-    color:white;
+    color:@white;
     padding:5px 7px 0px 7px;
 }
 
@@ -345,7 +353,7 @@ ul.tags li {
     width:50px;
     height: 22px;
     background-color:@orange;
-    color:white;
+    color:@white;
     font-size:@l;
     text-align:center;
     margin-right:2px;
@@ -484,7 +492,7 @@ nav.contextual-menu {
 }
 
 .mainHeader nav a:hover, mainHeader nav a:active, .mainHeader nav .active a:link, .mainHeader nav .active a:visited {
-    color: white;
+    color: @white;
     background-color: @black;
 }
 
@@ -599,7 +607,7 @@ margin-top:15px;
      margin:2px 0;
      height:20px;
     background-color: @black;
-    color: white;
+    color: @white;
     font-family:RE02;
     text-transform: uppercase;
     letter-spacing:1px;
@@ -614,7 +622,7 @@ margin-top:15px;
     }
     
 .accordion .symbol {
-        color: white;
+        color: @white;
         font-size:@l;
         margin: 0px 5px;
 }
@@ -631,7 +639,7 @@ margin-top:15px;
     margin:15px 0;
     height: 12px;
     background-color:@black;
-    color:white;
+    color:@white;
     font-family:RE02;
     padding:4px;
     letter-spacing:1px;
@@ -824,7 +832,7 @@ div.header-controlsArchives .symbols {
 
 .breves-header span {
     background-color: @blue;
-    color: white;
+    color: @white;
     padding: 10px @s;
     height: @s;
     font-size: @s;
@@ -872,13 +880,13 @@ div.header-controlsArchives .symbols {
     
 .breves .symbol {
     margin:2px 5px;
-    color:white;
+    color: @white;
     font-size:@l;
     }
 
 
 .breves .suite p {
-    color: white;
+    color: @white;
     text-transform: uppercase;
     letter-spacing:1px;
     font-family: RE02;
@@ -899,7 +907,7 @@ div.header-controlsArchives .symbols {
     position: absolute;
     left:10px;
     top:-5px;
-    color:white;
+    color: @white;
     padding:5px 7px 0px 7px;
 }
 
