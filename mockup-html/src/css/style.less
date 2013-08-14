@@ -921,8 +921,18 @@ div.header-controlsArchives .symbols {
     border: 1px solid @black;
 }
 
+.qtip div.header-details {
+    border-top: inherit;
+}
+
+.qtip-tip, .qtip-titlebar, .qtip-close {
+    display: none !important; /* I removed it here, but the qTIP plugin can also be used
+    to create tooltips that stay in place, with a close button etc. */
+}
+
 .qtip-content{
     padding: 0;
+    border: none;
 }
 
 .qtip-default{

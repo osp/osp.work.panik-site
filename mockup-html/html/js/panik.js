@@ -34,6 +34,7 @@ $("#breves-content a").click(function(e){
     $("#breves-content").load("breve.html .breve");
 });
 
+
 // A tooltip with an emission’s info is displayed over the GRILLE
 
 tipHTML = $(".grille-tip").html();
@@ -43,6 +44,7 @@ $('#grille a[href]').each(function() {
    $(this).qtip({
             content: {
                 text: tipHTML,
+                button: false
             },
         });
     }
